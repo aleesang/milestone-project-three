@@ -9,6 +9,14 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cl
 
 mongo = PyMongo(app)
 
+
+@app.route('/')
+@app.route('/get_songs')
+def get_songs():
+    return render_template("songs.html", 
+                           tasks=mongo.db.songs.find())
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
