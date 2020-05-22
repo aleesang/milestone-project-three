@@ -22,10 +22,30 @@ def get_genres():
     return render_template('genres.html',
                            genres=mongo.db.genre.find())
 
+
+@app.route('/insert_genre', methods=['POST'])
+def insert_genre():
+    genre_doc = {'genre_name': request.form.get('genre_name')}
+    mongo.db.genre.insert_one(genre_doc)
+    return redirect(url_for('get_genres'))
+
+
 @app.route('/add_song')
 def add_song():
     return render_template('addsong.html',
                            categories=mongo.db.genre.find())
+
+
+@app.route('/add_genre')
+def add_genre():
+    return render_template('addgenre.html')
+
+
+@app.route('/edit_genre/<genre_id>')
+def edit_genre(genre_id):
+    return render_template('editgenre.html',
+    genre=mongo.db.genre.find_one({'_id': ObjectId(genre_id)}))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
