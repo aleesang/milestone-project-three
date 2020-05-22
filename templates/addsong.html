@@ -8,8 +8,8 @@
                     <i class="material-icons prefix">poll</i>
                     <select id="genre" name="genre_name">
                   <option value="" disabled selected>Choose Genre</option>
-                  {% for cat in genres %}
-                      <option value="{{cat.genre_name}}">{{cat.genre_name}}</option>
+                  {% for gen in genres %}
+                      <option value="{{cat.genre_name}}">{{gen.genre_name}}</option>
                   {% endfor %}
                 </select>
                     <label>Song Genre</label>
