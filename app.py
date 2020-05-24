@@ -67,13 +67,6 @@ def add_genre():
     return render_template('addgenre.html')
 
 
-@app.route('/insert_genre', methods=['POST'])
-def insert_genre():
-    genre_doc = {'genre_name': request.form.get('genre_name')}
-    mongo.db.categories.insert_one(genre_doc)
-    return redirect(url_for('get_genres'))
-
-
 @app.route('/edit_genre/<genre_id>')
 def edit_genre(genre_id):
     return render_template('editgenre.html',
