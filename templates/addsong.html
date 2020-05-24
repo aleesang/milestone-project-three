@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Add Song</h3>
 <div class="row">
-    <form action="{{ url_for('insert_song') }}" method="POST"  class="col s12">
+    <form action="{{ url_for('get_songs') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
@@ -9,7 +9,7 @@
                     <select id="genre" name="genre_name">
                   <option value="" disabled selected>Choose Genre</option>
                   {% for gen in genres %}
-                      <option value="{{cat.genre_name}}">{{gen.genre_name}}</option>
+                      <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
                   {% endfor %}
                 </select>
                     <label>Song Genre</label>
@@ -24,6 +24,11 @@
                 <i class="material-icons prefix">assignment</i>
                 <input id="artist_name" name="artist_name" type="text">
                 <label for="icon_prefix">Artist Name</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="song_link"" name="song_link"" type="text">
+                <label for="icon_prefix">Song Link (Spotify or Youtube)</label>
             </div>
         </div>
         <div class="row">
