@@ -5,3 +5,14 @@
     margin: 5px 5px;
     padding: 0 0.5em;
 }
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
