@@ -16,7 +16,15 @@
                     {% endif %}
                   {% endfor %}
                 </select>
-                <label>song genre</label>
+                <label>Song Genre</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <label for="icon_prefix">Song Cover image</label>
+                <input id="song_image" name="song_image" type="file" accept="image/*" onchange="preview_image(event)">
+                <img id="output_image" height=300 width=300>
             </div>
         </div>
         <div class="row">
@@ -36,15 +44,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
-                <input id="song_link" name="song_link" type="text" class="validate" value="{{song.song_link}}">
-                <label for="icon_prefix">Song Link</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">subject</i>
-                <textarea name="song_description" id="song_description" class="materialize-textarea">{{song.song_description}}</textarea>
-                <label for="icon_telephone">song Description</label>
+                <input id="song_link"" name="song_link" type="url">
+                <label for="icon_prefix">Song Link (Spotify or Youtube)</label>
             </div>
         </div>
         <div class="row">

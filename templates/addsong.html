@@ -18,8 +18,9 @@
 
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
-                <input id="song_image" name="song_image" type="file" accept="image/*" />
-                <label for="icon_prefix">Song Cover</label>
+                <label for="icon_prefix">Song Cover image</label>
+                <input id="song_image" name="song_image" type="file" accept="image/*" onchange="preview_image(event)">
+                <img id="output_image" height=300 width=300>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
@@ -45,5 +46,16 @@
         </div>
     </form>
 </div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
 
 {% endblock %}
