@@ -31,6 +31,13 @@ def edit_song(song_id):
                            genre=all_genre)
 
 
+@app.route('/insert_song', methods=['POST'])
+def insert_song():
+    songs =  mongo.db.songs
+    songs.insert_one(request.form.to_dict())
+    return redirect(url_for('get_songs'))
+
+
 @app.route('/update_song/<song_id>', methods=["POST"])
 def update_song(song_id):
     songs = mongo.db.songs
@@ -38,7 +45,6 @@ def update_song(song_id):
     {
         'song_name':request.form.get('song_name'),
         'genre_name':request.form.get('genre_name'),
-        'song_description': request.form.get('song_description'),
     })
     return redirect(url_for('get_songs'))
 
