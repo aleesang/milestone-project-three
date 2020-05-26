@@ -1,5 +1,5 @@
-..card.card-image {
-    height: 150px;
-    width: 150px;
+.card-image.resize {
+    height: 250px;
+    width: 250px;
     padding: 10px;
 }

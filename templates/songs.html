@@ -8,9 +8,10 @@
             <ul>
                 <li>
                     <span>
-                        <img class="responsive-img" src="{{song.song_image}}" alt="Uploaded Image">
+                        <img class="responsive-img resize" src="{{song.song_image}}" alt="Uploaded Image">
                     </span>
                 </li>
+                <div class="card-content">
                 <li>
                     <span>
                         <i class="material-icons prefix">apps</i> Genre: {{song.genre_name}} 
@@ -30,7 +31,8 @@
                     <span>
                         <i class="material-icons prefix">music_note</i> <a href="{{song.song_link}}" target="_blank">Play Song</a>
                     </span>
-                </li>        
+                </li>    
+                </div>    
             </ul>
         </div>
     <!--Edit section-->
