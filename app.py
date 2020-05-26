@@ -20,7 +20,7 @@ def get_songs():
 @app.route('/add_song')
 def add_song():
     return render_template('addsong.html',
-                           genre=mongo.db.genre.find())   
+                           genres=mongo.db.genre.find())   
     
     
 @app.route('/edit_song/<song_id>')
@@ -43,8 +43,11 @@ def update_song(song_id):
     songs = mongo.db.songs
     songs.update( {'_id': ObjectId(song_id)},
     {
-        'song_name':request.form.get('song_name'),
         'genre_name':request.form.get('genre_name'),
+        'song_image':request.form.get('song_image'),
+        'song_name':request.form.get('song_name'),
+        'artist_name':request.form.get('artist_name'),
+        'song_link':request.form.get('song_link')
     })
     return redirect(url_for('get_songs'))
 
