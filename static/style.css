@@ -1,14 +1,65 @@
-.card-row {
-    width:320px; 
-    left:20px; 
-    display: inline-block; 
-    margin-right: 40px;
-  -moz-column-width: 23rem;
-  -webkit-column-width: 23rem;
-  -moz-column-gap: 1rem;
-  -webkit-column-gap: 1rem;
-}
 
 .h-style {
     text-transform: uppercase;
+}
+
+.card-title {
+    background-color: black;
+    font: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* Nav Bar */
+.nav-wrapper {
+    background-color: black;
+}
+
+/* Site Buttons */
+.delete_button {
+  background-color: #910853;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.delete_button:hover {
+  color: #f7e4fc;
+  background-color: #701547;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.delete_button:active:focus {
+  color: #f7e4fc;
+}
+
+.edit_button {
+  background-color: #910853;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.edit_button:hover {
+  color: #f7e4fc;
+  background-color: #701547;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.edit_button:active:focus {
+  color: #f7e4fc;
 }
