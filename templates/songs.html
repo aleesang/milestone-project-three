@@ -5,15 +5,14 @@
 </div>
 
 {% for song in songs %}  
-<div class="container-fluid section">
-<div class="row card-row">
-    <div class="col s12 m6 l3" style="width:100%;">
+
+    <div class="row">
+      <div class="col s3">
       <div class="card">
         <div class="card-image">
-          <img class="responsive-img resize" src="{{song.song_image}}" alt="Uploaded Image">
+          <img src="{{song.song_image}}" alt="URL Image">
           <span class="card-title">{{song.genre_name}}</span>
         </div>
-        <div class="card-content">
             <ul>
                 <li>
                     <span>
@@ -31,18 +30,16 @@
                     </span>
                 </li>  
             </ul>
-        </div>
         <div class="row">
             <div class="col s12">
-                <a href="{{url_for('delete_song', song_id=song._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
-                <a href="{{url_for('edit_song', song_id=song._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>   
+                <a href="{{url_for('delete_song', song_id=song._id)}}" class="btn delete_button">Delete</a>
+                <a href="{{url_for('edit_song', song_id=song._id)}}" class="btn edit_button">Edit</a>   
             </div>
         </div>
-    </div>
-            {% endfor %}
-      </div>
-    </div>
-  </div>
 
+      </div>   
+    </div>
+
+{% endfor %}
   
 {% endblock %}
