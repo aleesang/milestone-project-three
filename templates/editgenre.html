@@ -5,9 +5,16 @@
     <form action="{{ url_for('update_genre', genre_id=genre._id) }}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">poll</i>
+                <i class="material-icons prefix">apps</i>
                 <input id="genre_name" name="genre_name" type="text" class="validate" value="{{genre.genre_name}}">
                 <label for="genre_name">Genre Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field col s12">
+                <i class="material-icons prefix">add_a_photo</i>
+                <label for="icon_prefix">Upload Cover Image</label>
+                <input id="genre_image" name="genre_image" type="text" class="validate" value="{{genre.genre_image}}">
             </div>
         </div>
         <div class="row">
