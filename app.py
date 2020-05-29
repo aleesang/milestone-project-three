@@ -10,7 +10,6 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cl
 mongo = PyMongo(app)
 
  
-@app.route('/')
 @app.route('/get_songs')
 def get_songs():
     return render_template("songs.html", 
@@ -28,7 +27,7 @@ def edit_song(song_id):
     the_song =  mongo.db.songs.find_one({"_id": ObjectId(song_id)})
     all_genre =  mongo.db.genre.find()
     return render_template('editsongs.html', song=the_song,
-                           genre=all_genre)
+                           genres=all_genre)
 
 
 @app.route('/insert_song', methods=['POST'])
@@ -47,7 +46,7 @@ def update_song(song_id):
         'song_image':request.form.get('song_image'),
         'song_name':request.form.get('song_name'),
         'artist_name':request.form.get('artist_name'),
-        'song_link':request.form.get('song_link')
+        'song_link':request.form.get('song_link'),
     })
     return redirect(url_for('get_songs'))
 
@@ -57,7 +56,7 @@ def delete_song(song_id):
     mongo.db.songs.remove({'_id': ObjectId(song_id)})
     return redirect(url_for('get_songs'))
 
-
+@app.route('/')
 @app.route('/get_genres')
 def get_genres():
     return render_template('genres.html',
@@ -86,7 +85,8 @@ def edit_genre(genre_id):
 def update_genre(genre_id):
     mongo.db.genre.update(
         {'_id': ObjectId(genre_id)},
-        {'genre_name': request.form.get('genre_name')})
+        {'genre_name': request.form.get('genre_name'),       
+        'genre_image':request.form.get('genre_image'),})
     return redirect(url_for('get_genres'))
    
 

@@ -41,7 +41,7 @@
 }
 
 .edit_button {
-  background-color: #910853;
+  background-color: #5c3249;
   color: #ffffff;
   border: none;
   border-radius: 0px;
@@ -52,7 +52,7 @@
 
 .edit_button:hover {
   color: #f7e4fc;
-  background-color: #701547;
+  background-color: #7e3e61;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
