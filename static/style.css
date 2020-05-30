@@ -63,3 +63,27 @@
 .edit_button:active:focus {
   color: #f7e4fc;
 }
+
+.save_button {
+  background-color: #642f4c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.save_button:hover {
+  color: #f7e4fc;
+  background-color: #701547;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.save_button:active:focus {
+  color: #f7e4fc;
+}
