@@ -58,7 +58,19 @@ def delete_genre(genre_id):
 def get_country():
     return render_template('country.html',
                            country=mongo.db.genre.find({"genre_name":"Country"}))
-     
+
+
+@app.route('/get_chill')
+def get_chill():
+    return render_template('chill.html',
+                           chill=mongo.db.genre.find({"genre_name":"Chill"}))
+
+
+@app.route('/get_folk')
+def get_folkl():
+    return render_template('folk.html',
+                           folk=mongo.db.genre.find({"genre_name":"Folk"}))
+    
     
 @app.route('/get_songs')
 def get_songs():
