@@ -13,14 +13,14 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_genres')
 def get_genres():
-    return render_template('genres.html',
-                           genres=mongo.db.genre.find()) 
+    return render_template('genres.html') 
 
 
 @app.route('/get_country')
 def get_country():
     return render_template('country.html',
                            country=mongo.db.genre.find({"genre_name":"Country"}))
+
 
 @app.route('/insert_genre', methods=['POST'])
 def insert_genre():
@@ -57,7 +57,7 @@ def delete_genre(genre_id):
     
 @app.route('/get_songs')
 def get_songs():
-    return render_template("songs.html", 
+    return render_template("allsongs.html", 
                            songs=mongo.db.songs.find())
     
 
@@ -67,12 +67,18 @@ def add_song():
                            genres=mongo.db.genre.find())   
     
     
-@app.route('/edit_song/<song_id>')
+@app.route("/show_song/<song_id>")
+def show_song(song_id):
+    the_song = mongo.db.songs.find_one({"_id": ObjectId(song_id)})
+    all_genres = mongo.db.genres.find()
+    return render_template('showsong.html', song=the_song, genres=all_genres)
+
+
+@app.route('/edit_song/<song_id>', methods=['POST'])
 def edit_song(song_id):
     the_song =  mongo.db.songs.find_one({"_id": ObjectId(song_id)})
-    all_genre =  mongo.db.genre.find()
-    return render_template('editsongs.html', song=the_song,
-                           genres=all_genre)
+    all_genres =  mongo.db.genre.find()
+    return render_template('editsongs.html', song=the_song, genres=all_genres)
 
 
 @app.route('/insert_song', methods=['POST'])
@@ -96,7 +102,7 @@ def update_song(song_id):
     return redirect(url_for('get_songs'))
 
 
-@app.route('/delete_song/<song_id>')
+@app.route('/delete_song/<song_id>', methods=['POST'])
 def delete_song(song_id):
     mongo.db.songs.remove({'_id': ObjectId(song_id)})
     return redirect(url_for('get_songs'))
