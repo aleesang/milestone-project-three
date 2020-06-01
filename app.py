@@ -11,22 +11,21 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_genres')
-def get_genres():
-    return render_template('genres.html') 
+@app.route('/home')
+def home():
+    return render_template('home.html') 
 
 
-@app.route('/get_country')
-def get_country():
-    return render_template('country.html',
-                           country=mongo.db.genre.find({"genre_name":"Country"}))
-
+@app.route('/all_genres')
+def all_genres():
+    return render_template('allgenres.html', genres=mongo.db.genre.find()) 
+    
 
 @app.route('/insert_genre', methods=['POST'])
 def insert_genre():
     genre_doc = {'genre_name': request.form.get('genre_name')}
     mongo.db.genre.insert_one(genre_doc)
-    return redirect(url_for('get_genres'))
+    return redirect(url_for('home'))
 
 
 @app.route('/add_genre')
@@ -46,13 +45,19 @@ def update_genre(genre_id):
         {'_id': ObjectId(genre_id)},
         {'genre_name': request.form.get('genre_name'),       
         'genre_image':request.form.get('genre_image'),})
-    return redirect(url_for('get_genres'))
+    return redirect(url_for('home'))
    
 
 @app.route('/delete_genre/<genre_id>')
 def delete_genre(genre_id):
     mongo.db.genre.remove({'_id': ObjectId(genre_id)})
-    return redirect(url_for('get_genres'))
+    return redirect(url_for('home'))
+
+
+@app.route('/get_country')
+def get_country():
+    return render_template('country.html',
+                           country=mongo.db.genre.find({"genre_name":"Country"}))
      
     
 @app.route('/get_songs')
