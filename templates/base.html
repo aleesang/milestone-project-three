@@ -14,19 +14,17 @@
   <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="{{url_for('home')}}" class="brand-logo"><img src="static/images/YouMusicLogo.png" height="60" alt=""></a>
+                <a href="{{url_for('all_genres')}}" class="brand-logo"><img src="static/images/YouMusicLogo.png" height="60" alt=""></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('all_genres')}}">Home</a></li>
                     <li><a href="{{url_for('get_songs')}}">View All Songs</a></li>
                     <li><a href="{{url_for('add_song')}}">Add New Song</a></li>
-                    <li><a href="{{url_for('add_genre')}}">Add New Genre</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('all_genres')}}">Home</a></li>
                     <li><a href="{{url_for('get_songs')}}">View All Songs</a></li>
                     <li><a href="{{url_for('add_song')}}">Add New Song</a></li>
-                    <li><a href="{{url_for('add_genre')}}">Add New Genre</a></li>
                 </ul>
             </div>        
         </nav>
