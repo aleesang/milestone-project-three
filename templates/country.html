@@ -1,10 +1,9 @@
 {% extends 'base.html'%} {% block content %}
 
-<div class="col s12">
-    <h3 class="h-style">Country</h3>
-</div>
-
 {% for song in country %} 
+
+<h3 class="h-style">{{song.genre_name}}</h3>
+
  
     <div class="row">
       <div class="col s3">
@@ -30,7 +29,7 @@
                 </li>  
             </ul>
         <div class="row">
-            <div class="col s12">
+            <div class="col s12 m6 l3">
                 <form action="{{url_for('delete_song', song_id=song._id)}}" method="POST">
                 <button type="submit" name="action" class="btn delete_button">Delete</button>
                 </form>
