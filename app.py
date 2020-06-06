@@ -9,17 +9,19 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cl
 
 mongo = PyMongo(app)
 
-
+    
 @app.route('/')
 @app.route('/all_genres')
 def all_genres():
-    return render_template('allgenres.html') 
+    return render_template('allgenres.html',
+                           genres=mongo.db.genre.find())
     
 
+   
 @app.route('/get_country')
 def get_country():
     return render_template('country.html',
-                           country=mongo.db.genre.find({"genre_name":"Country"}))
+                           country=mongo.db.genre.find({"genre_name":"Country"})) 
     
 
 @app.route('/get_chill')
