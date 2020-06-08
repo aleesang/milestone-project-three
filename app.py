@@ -32,7 +32,37 @@ def get_chill():
 def get_folk():
     return render_template('folk.html', 
                            songs=mongo.db.songs.find({"genre_name":"Folk"}))
-    
+
+
+@app.route('/get_pop')
+def get_pop():
+    return render_template('pop.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Pop"}))
+
+
+@app.route('/get_rock')
+def get_rock():
+    return render_template('rock.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Rock"}))
+ 
+
+@app.route('/get_reggae')
+def get_reggae():
+    return render_template('reggae.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Reggae"}))
+
+
+@app.route('/get_urban')
+def get_urban():
+    return render_template('urban.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Urban"}))
+
+
+@app.route('/get_other')
+def get_other():
+    return render_template('other.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Other"}))
+              
     
 @app.route('/get_songs')
 def get_songs():
