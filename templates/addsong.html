@@ -3,18 +3,15 @@
 <div class="row">
     <form action="{{ url_for('insert_song') }}" method="POST"  class="col s12">
         <div class="row">
-            <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">apps</i>
-                    <select multiple id="genre" name="genre_name">
+                    <select multiple id="genre" name="genre_name" class="form-control">
                   <option value="" disabled selected>Choose Genre</option>
-                  {% for gen in genres %}
+                  {% for gen in genre %}
                       <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
                   {% endfor %}
-                  
                 </select>
                     <label>Song Genre</label>
-                </div>
             </div>
             <div class="file-field input-field col s12">
                 <i class="material-icons prefix">add_a_photo</i>

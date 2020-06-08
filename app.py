@@ -11,41 +11,40 @@ mongo = PyMongo(app)
 
     
 @app.route('/')
-@app.route('/all_genres')
-def all_genres():
-    return render_template('allgenres.html',
-                           genres=mongo.db.genre.find())
+@app.route('/home')
+def home():
+    return render_template('home.html')
     
 
-   
 @app.route('/get_country')
 def get_country():
-    return render_template('country.html',
-                           country=mongo.db.genre.find({"genre_name":"Country"})) 
+    return render_template('country.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Country"}))
     
 
 @app.route('/get_chill')
 def get_chill():
-    return render_template('chill.html',
-                           chill=mongo.db.genre.find({"genre_name":"Chill"}))
+    return render_template('chill.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Chill"}))
 
 
 @app.route('/get_folk')
 def get_folk():
-    return render_template('folk.html',
-                           folk=mongo.db.genre.find({"genre_name":"Folk"}))
+    return render_template('folk.html', 
+                           songs=mongo.db.songs.find({"genre_name":"Folk"}))
     
     
 @app.route('/get_songs')
 def get_songs():
     return render_template("allsongs.html", 
-                           songs=mongo.db.songs.find().sort("genre_name"))
+                           songs=mongo.db.songs.find().sort("genre_name"), genre=mongo.db.genre.find())
     
 
 @app.route('/add_song')
 def add_song():
     return render_template('addsong.html',
-                           genres=mongo.db.genre.find())   
+                           song=mongo.db.songs.find(),
+                           genre=mongo.db.genre.find())   
 
     
 @app.route("/show_song/<song_id>")
@@ -69,10 +68,11 @@ def insert_song():
     return redirect(url_for('get_songs'))
 
 
-@app.route('/update_song/<song_id>', methods=["POST"])
+@app.route('/update_song/<song_id>', methods=['POST'])
 def update_song(song_id):
     songs = mongo.db.songs
-    songs.update( {'_id': ObjectId(song_id)},
+    songs.update( 
+    {'_id': ObjectId(song_id)},
     {
         'genre_name':request.form.get('genre_name'),
         'song_image':request.form.get('song_image'),

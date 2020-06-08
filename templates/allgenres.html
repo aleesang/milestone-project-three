@@ -1,65 +1,29 @@
 {% extends 'base.html'%} {% block content %}
 
-<div class="row">
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-         <a href="{{url_for('get_chill')}}"><img src="/static/images/Chill.png"></a>
-        </div>
-      </div>
-    </div>
-     <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-           <a href="{{url_for('get_country')}}"><img src="/static/images/Country.png"></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <a href="{{url_for('get_folk')}}"><img src="/static/images/Folk.png"></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <img src="/static/images/Pop.png">
-        </div>
-      </div>
-    </div>   
-</div> 
-<div class="row">
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <img src="/static/images/Rock.png">
-        </div>
-      </div>
-    </div>
-     <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <img src="/static/images/Reggae.png">
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <img src="/static/images/Urban.png">
-        </div>
-      </div>
-    </div>
-    <div class="col s3">
-      <div class="card">
-        <div class="card-image hover">
-          <img src="/static/images/Other.png">
-        </div>
-      </div>
-    </div>   
-</div> 
+<h3 class="title-category title-smaller">Genres</h3> 
 
+{% for song in genre %} 
+<div class="row">
+      <div class="col s3">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{song.song_image}}" alt="URL Image">
+          <span class="card-title">{{song.genre_name}}</span>
+        </div>
+            <ul>
+                <li>
+                    <span>
+                        <i class="material-icons prefix">album</i> <strong>Song Name:</strong> {{song.song_name}} 
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="material-icons prefix">account_circle</i> <strong>Artist Name:</strong> {{song.artist_name}} 
+                    </span>
+                </li>
+            </ul>
 
+      </div>   
+    </div>
+  {% endfor %}  
 {% endblock %}
