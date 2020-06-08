@@ -6,13 +6,13 @@
         <div class="row">
             <div class="input-field file-field col s12">
                 <i class="material-icons prefix">apps</i>
-                <select id="genre" name="genre_name" class="validate" value="{{song.genre_name}}">
+                <select id="genres" name="genre_name" class="validate" value="{{song.genre_name}}">
                   <option value="" disabled selected>Choose genre</option>
-                  {% for gen in genres %}
-                      {% if gen.genre_name == song.genre_name%}
-                      <option value="{{gen.genre_name}}" selected >{{gen.genre_name}}</option>
+                  {% for genre in genres %}
+                      {% if genre.genre_name == song.genre_name %}
+                      <option value="{{genre.genre_name}}" selected >{{genre.genre_name}}</option>
                       {% else %}
-                       <option value="{{gen.genre_name}}">{{gen.genre_name}}</option>
+                       <option value="{{genre.genre_name}}">{{genre.genre_name}}</option>
                     {% endif %}
                   {% endfor %}
                 </select>
