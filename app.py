@@ -67,21 +67,22 @@ def get_other():
 @app.route('/get_songs')
 def get_songs():
     return render_template("allsongs.html", 
-                           songs=mongo.db.songs.find().sort("genre_name"), genre=mongo.db.genre.find())
+                           songs=mongo.db.songs.find().sort("genre_name"), 
+                           genres=mongo.db.genre.find())
+
+ 
+@app.route("/show_song/<song_id>")
+def show_song(song_id):
+    the_song = mongo.db.songs.find_one({"_id": ObjectId(song_id)})
+    all_genres = mongo.db.genre.find()
+    return render_template('showsong.html', song=the_song, genres=all_genres)
     
 
 @app.route('/add_song')
 def add_song():
     return render_template('addsong.html',
                            song=mongo.db.songs.find(),
-                           genre=mongo.db.genre.find())   
-
-    
-@app.route("/show_song/<song_id>")
-def show_song(song_id):
-    the_song = mongo.db.songs.find_one({"_id": ObjectId(song_id)})
-    all_genres = mongo.db.genre.find()
-    return render_template('showsong.html', song=the_song, genres=all_genres)
+                           genres=mongo.db.genre.find())   
 
 
 @app.route('/edit_song/<song_id>', methods=['POST'])
