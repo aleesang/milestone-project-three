@@ -1,18 +1,20 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html'%} {% block content %}
+
 <h3>Add Song</h3>
 <div class="row">
-    <form action="{{ url_for('insert_song') }}" method="POST"  class="col s12">
+    <form action="{{ url_for('insert_song') }}" method="POST" class="col s12">
         <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">apps</i>
-                    <select multiple="genres" name="genre_name" class="form-control">
-                  <option value="" disabled selected>Choose Genre</option>
-                  {% for song in genres %}
-                      <option value="{{song.genre_name}}">{{song.genre_name}}</option>
-                  {% endfor %}
-                </select>
-                    <label>Song Genre</label>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">apps</i>
+                    <select id="genres"  name="genre_name" class="form-control">
+                        <option value="" disabled selected>Choose Genre</option>
+                        {% for song in genres %}
+                        <option value="{{song.genre_name}}">{{song.genre_name}}</option>
+                        {% endfor %}
+                    </select>
+                <label>Song Genre</label>
             </div>
+        </div>
             <div class="file-field input-field col s12">
                 <i class="material-icons prefix">add_a_photo</i>
                 <label for="icon_prefix">URL for Cover Image</label>
@@ -34,7 +36,7 @@
                 <label for="icon_prefix">Song URL (Spotify or Youtube)</label>
             </div>
         <div class="row">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Add Song
+            <button class="btn save_button" type="submit" name="action">Add Song
                 <i class="material-icons right">send</i>
              </button>
         </div>
