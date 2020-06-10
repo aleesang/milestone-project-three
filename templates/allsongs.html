@@ -1,13 +1,14 @@
-{% extends 'base.html'%} {% block content %}
+{% extends 'base.html' %} {% block content %}
 
+<div class=row>
 <div class="col s12">
     <h3 class="h-style">All Songs</h3>
 </div>
+</div>
 
 {% for song in songs %}  
-
     <div class="row">
-      <div class="col s3">
+      <div class="col m3">
       <div class="card">
         <div class="card-image">
           <img src="{{song.song_image}}" alt="URL Image">
@@ -15,12 +16,12 @@
         </div>
             <ul>
                 <li>
-                    <span>
+                    <span class="truncate">
                         <i class="material-icons prefix">album</i> <strong>Song Name:</strong> {{song.song_name}} 
                     </span>
                 </li>
                 <li>
-                    <span>
+                    <span class="truncate">
                         <i class="material-icons prefix">account_circle</i> <strong>Artist Name:</strong> {{song.artist_name}} 
                     </span>
                 </li>
@@ -30,10 +31,9 @@
                     </span>
                 </li> 
             </ul>
-
       </div>   
     </div>
-
+ </div>
 {% endfor %}
-  
+
 {% endblock %}

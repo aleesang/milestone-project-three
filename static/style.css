@@ -1,6 +1,15 @@
 
+@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700");
+
+
 .h-style {
     text-transform: uppercase;
+    font-family: Anton, sans-serif;
+}
+
+.card {
+    width: 60%;
+    float: left;
 }
 
 .card-title {
@@ -95,4 +104,11 @@
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0.5;  
+}
+
+/* Footer */
+.page-footer {
+    background-color: black;
+    margin-top: 100px;
+    position: relative;
 }
