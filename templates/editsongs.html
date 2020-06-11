@@ -23,27 +23,34 @@
             <div class="file-field input-field col s12">
                 <i class="material-icons prefix">add_a_photo</i>
                 <label for="icon_prefix">Upload Cover Image</label>
-                <input id="song_image" name="song_image" type="text" class="validate" value="{{song.song_image}}">
+                <input id="song_image" name="song_image" type="text" class="validate" value="{{song.song_image}}" required>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">album</i>
-                <input id="song_name" name="song_name" type="text" class="validate" value="{{song.song_name}}">
+                <input id="album_name" name="album_name" type="text" class="validate" value="{{song.album_name}}" required>
+                <label for="album_name">Album Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">album</i>
+                <input id="song_name" name="song_name" type="text" class="validate" value="{{song.song_name}}" required>
                 <label for="icon_prefix">Song Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="artist_name" name="artist_name" type="text" class="validate" value="{{song.artist_name}}">
+                <input id="artist_name" name="artist_name" type="text" class="validate" value="{{song.artist_name}}" required>
                 <label for="icon_prefix">Artist Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12 tooltip">
                 <i class="material-icons prefix">music_note</i>
-                <input id="song_link"" name="song_link" type="url" class="validate" value="{{song.song_link}}">
+                <input id="song_link"" name="song_link" type="url" class="validate" value="{{song.song_link}}" required>
                 <label for="icon_prefix">Song Link (Spotify or Youtube)</label>
                 <span class="tooltiptext"><strong>Inserting "embed" in the Song URL</strong>
                                             <p>1. Open Spotify Web Player.
