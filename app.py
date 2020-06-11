@@ -67,7 +67,7 @@ def get_other():
 @app.route('/get_songs')
 def get_songs():
     return render_template("allsongs.html", 
-                           songs=mongo.db.songs.find().sort("genre_name"), 
+                           songs=mongo.db.songs.find().sort("song_name"), 
                            genres=mongo.db.genre.find())
 
  
@@ -107,6 +107,7 @@ def update_song(song_id):
     {
         'genre_name':request.form.get('genre_name'),
         'song_image':request.form.get('song_image'),
+        'album_name':request.form.get('album_name'),
         'song_name':request.form.get('song_name'),
         'artist_name':request.form.get('artist_name'),
         'song_link':request.form.get('song_link'),
