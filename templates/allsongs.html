@@ -2,18 +2,20 @@
 
 <div class=row>
 <div class="col s12">
-    <h3 class="h-style">All Songs</h3>
+    <h3 class="h-style"><i class="medium material-icons prefix">library_music</i> All Songs</h3>
 </div>
 </div>
 
-{% for song in songs %}  
-    <div class="row">
-      <div class="col m3">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{song.song_image}}" alt="URL Image">
-          <span class="card-title">{{song.genre_name}}</span>
-        </div>
+{% for song in songs %} 
+
+<div class="row">
+    <div class="all-songs col s12 m3">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{song.song_image}}" alt="URL Image">
+                <span class="card-title">{{song.genre_name}}</span>
+            </div>
+            <div class="card-content">
             <ul>
                 <li>
                     <span class="truncate">
@@ -26,14 +28,14 @@
                     </span>
                 </li>
                 <li>
-                    <span>
+                <span>
                 <a href="{{url_for('show_song', song_id=song._id)}}" class='btn edit_button'>View Song</a>
                     </span>
                 </li> 
             </ul>
-      </div>   
+            </div>
+        </div>   
     </div>
  </div>
 {% endfor %}
-
 {% endblock %}

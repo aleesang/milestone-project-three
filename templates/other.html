@@ -9,40 +9,32 @@
 {% for song in songs %} 
  
 <div class="row">
-      <div class="col s3">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{song.song_image}}" alt="URL Image">
-        </div>
+    <div class="col s12 m3 l3">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{song.song_image}}" alt="URL Image">
+                <span class="card-title">{{song.genre_name}}</span>
+            </div>
+            <div class="card-content">
             <ul>
                 <li>
-                    <span>
+                    <span class="truncate">
                         <i class="material-icons prefix">album</i> <strong>Song Name:</strong> {{song.song_name}} 
                     </span>
                 </li>
                 <li>
-                    <span>
+                    <span class="truncate">
                         <i class="material-icons prefix">account_circle</i> <strong>Artist Name:</strong> {{song.artist_name}} 
                     </span>
                 </li>
                 <li>
-                    <span>
-                        <i class="material-icons prefix">music_note</i> <strong><a href="{{song.song_link}}" target="_blank">Play Song</strong></a>
+                <span>
+                <a href="{{url_for('show_song', song_id=song._id)}}" class='btn edit_button'>View Song</a>
                     </span>
-                </li>  
+                </li> 
             </ul>
-        <div class="row">
-            <div class="col s12 m6 l3">
-                <form action="{{url_for('delete_song', song_id=song._id)}}" method="POST">
-                <button type="submit" name="action" class="btn delete_button">Delete</button>
-                </form>
-                <form action="{{url_for('edit_song', song_id=song._id)}}" method="POST"> 
-                <button type="submit" name="action" class="btn delete_button">Edit</button> 
-                </form>
             </div>
-        </div>
-
-      </div>   
+        </div>   
     </div>
  </div>
 

@@ -1,22 +1,49 @@
 
-@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 .h-style {
     text-transform: uppercase;
-    font-family: Anton, sans-serif;
+    font-family: 'Anton', sans-serif;
+    font-size: 3em;
+    margin-top: 1em;
 }
 
-.card {
-    width: 60%;
-    float: left;
-}
-
+/* Genre Title over Image on Card */
 .card-title {
     background-color: black;
     font: white;
     font-weight: bolder;
     text-transform: uppercase;
+}
+
+/* Show Song Page Styling */
+.song-name {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    color: rgb(145, 14, 86);
+}
+
+.artist-name {
+    text-transform: capatalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-style: italic;
+}
+
+/* Spotify Player */
+.spotify {
+  margin-top: 1em;
 }
 
 /* Nav Bar */
@@ -25,12 +52,16 @@
 }
 
 /* Site Buttons */
+.btn {
+  margin: auto;
+}
+
 .delete_button {
   background-color: #910853;
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin: auto;
+  margin-top: 1em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -54,7 +85,7 @@
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin: auto;
+  margin-top: 1em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -78,7 +109,7 @@
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin: auto;
+  margin-top: 1em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -106,9 +137,46 @@
   opacity: 0.5;  
 }
 
+/* Tooltip for Adding Spotify URL */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(37, 35, 35);
+  color: #fff;
+  line-height: 2em;
+  border-radius: 6px;
+  padding: 5px 5px 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Footer */
 .page-footer {
     background-color: black;
-    margin-top: 100px;
-    position: relative;
+    margin-top: 2em;
 }
