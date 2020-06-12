@@ -19,55 +19,55 @@ def home():
 @app.route('/get_country')
 def get_country():
     return render_template('country.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Country"}))
+                           songs=mongo.db.songs.find({"genre_name":"Country"}).sort("artist_name"))
     
 
 @app.route('/get_chill')
 def get_chill():
     return render_template('chill.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Chill"}))
+                           songs=mongo.db.songs.find({"genre_name":"Chill"}).sort("artist_name"))
 
 
 @app.route('/get_folk')
 def get_folk():
     return render_template('folk.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Folk"}))
+                           songs=mongo.db.songs.find({"genre_name":"Folk"}).sort("artist_name"))
 
 
 @app.route('/get_pop')
 def get_pop():
     return render_template('pop.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Pop"}))
+                           songs=mongo.db.songs.find({"genre_name":"Pop"}).sort("artist_name"))
 
 
 @app.route('/get_rock')
 def get_rock():
     return render_template('rock.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Rock"}))
+                           songs=mongo.db.songs.find({"genre_name":"Rock"}).sort("artist_name"))
  
 
 @app.route('/get_reggae')
 def get_reggae():
     return render_template('reggae.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Reggae"}))
+                           songs=mongo.db.songs.find({"genre_name":"Reggae"}).sort("artist_name"))
 
 
 @app.route('/get_urban')
 def get_urban():
     return render_template('urban.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Urban"}))
+                           songs=mongo.db.songs.find({"genre_name":"Urban"}).sort("artist_name"))
 
 
 @app.route('/get_other')
 def get_other():
     return render_template('other.html', 
-                           songs=mongo.db.songs.find({"genre_name":"Other"}))
+                           songs=mongo.db.songs.find({"genre_name":"Other"}).sort("artist_name"))
               
     
 @app.route('/get_songs')
 def get_songs():
     return render_template("allsongs.html", 
-                           songs=mongo.db.songs.find().sort("song_name"), 
+                           songs=mongo.db.songs.find().sort("artist_name"), 
                            genres=mongo.db.genre.find())
 
  
