@@ -11,6 +11,7 @@
     flex: 1 0 auto;
   }
 
+ /* Header Styles */ 
 .music_library_header {
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
@@ -36,7 +37,11 @@
     margin-bottom: 1em;
 }
 
-/* Genre Title over Image on Card */
+/* Card Styling */
+.card.large {
+  height: 450px;
+}
+
 .card-title {
     background-color: black;
     font: white;
@@ -82,11 +87,11 @@
 }
 
 .delete_button {
-  background-color: #910853;
+  background-color: #a84a7e;
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin-top: 1em;
+  margin: 1em 1em 0 0;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -153,6 +158,30 @@
   color: #f7e4fc;
 }
 
+.view_button {
+  background-color: #750d30de;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.view_button:hover {
+  color: #f7e4fc;
+  background-color: #a5005b;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.view_button:active:focus {
+  color: #f7e4fc;
+}
+
 .hover:hover{
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
@@ -204,4 +233,16 @@
 .page-footer {
     background-color: black;
     margin-top: 2em;
+}
+
+.footer_link {
+  color: #e785a6de;
+}
+
+.footer_link:hover {
+  color: #ca3691;
+}
+
+.footer_link:active:focus {
+  color: #f7e4fc;
 }
