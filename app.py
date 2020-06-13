@@ -10,7 +10,7 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cl
 mongo = PyMongo(app)
 
     
-@app.route('/')
+@app.route('*')
 @app.route('/home')
 def home():
     return render_template('home.html', 
