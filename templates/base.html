@@ -16,24 +16,37 @@
 <body>
     <header>
  <! -- navigation bar -- >
-  <div class="navbar-fixed">
+<div class="navbar-fixed">
     <nav>
     <div class="nav-wrapper">
       <a href="{{url_for('home')}}" class="brand-logo"><img src="static/images/YouMusicLogo.png" height="60" alt=""></a>
-      <a href="#" data-activates="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
         <li><a href="{{url_for('home')}}">Home</a></li>
-        <li><a href="{{url_for('get_songs')}}">View All Songs</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genres<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="{{url_for('get_songs')}}">All Songs</a></li>
         <li><a href="{{url_for('add_song')}}">Add New Song</a></li>
+      </ul>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="{{url_for('get_chill')}}">Chill</a></li>
+        <li><a href="{{url_for('get_country')}}">Country</a></li>
+        <li><a href="{{url_for('get_folk')}}">Folk</a></li>
+        <li><a href="{{url_for('get_pop')}}">Pop</a></li>
+        <li><a href="{{url_for('get_reggae')}}">Reggae</a></li>
+        <li><a href="{{url_for('get_rock')}}">Rock</a></li>
+        <li><a href="{{url_for('get_urban')}}">Urban</a></li>
+        <li><a href="{{url_for('get_other')}}">Other</a></li>
       </ul>
     </div>
   </nav>
+</div>
     <ul class="sidenav" id="mobile-demo">
         <li><a href="{{url_for('home')}}">Home</a></li>
-        <li><a href="{{url_for('get_songs')}}">View All Songs</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Genres<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="{{url_for('get_songs')}}">All Songs</a></li>
         <li><a href="{{url_for('add_song')}}">Add New Song</a></li>
   </ul>
-</div>
+
     </header>
 
 <! -- content -- >
@@ -64,7 +77,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.sidenav-trigger').sidenav();
+            $('.sidenav').sidenav();
+            $(".dropdown-trigger").dropdown();
             $('select').formSelect();
         });
     </script>
