@@ -3,16 +3,6 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
-from werkzeug.urls import url_encode, url_quote, url_join
-from werkzeug.utils import redirect, format_string
-from werkzeug.exceptions import HTTPException, NotFound, MethodNotAllowed, \
-     BadHost
-from werkzeug._internal import _get_environ, _encode_idna
-from werkzeug._compat import itervalues, iteritems, to_unicode, to_bytes, \
-    text_type, string_types, native_string_result, \
-    implements_to_string, wsgi_decoding_dance
-from werkzeug.datastructures import ImmutableDict, MultiDict
-
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cluster0-aveek.mongodb.net/Music_Library?retryWrites=true&w=majority')
@@ -21,7 +11,6 @@ mongo = PyMongo(app)
 
     
 @app.route('/')
-@app.route('/home')
 def home():
     return render_template('home.html', 
                            genres=mongo.db.genre.find().sort("genre_name"))
