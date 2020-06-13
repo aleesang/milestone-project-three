@@ -44,7 +44,7 @@
 
 .card-title {
     background-color: black;
-    font: white;
+    color: white;
     font-weight: bolder;
     text-transform: uppercase;
 }
@@ -79,6 +79,10 @@
 .nav-wrapper {
     background-color: black;
     text-transform: uppercase;
+}
+
+.dropdown-content {
+  color: #e785a6de;
 }
 
 /* Site Buttons */

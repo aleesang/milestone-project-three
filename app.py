@@ -13,7 +13,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', 
+                           genres=mongo.db.genre.find().sort("genre_name"))
     
 
 @app.route('/get_country')
@@ -66,7 +67,7 @@ def get_other():
     
 @app.route('/get_songs')
 def get_songs():
-    return render_template("allsongs.html", 
+    return render_template('allsongs.html', 
                            songs=mongo.db.songs.find().sort("artist_name"), 
                            genres=mongo.db.genre.find())
 
