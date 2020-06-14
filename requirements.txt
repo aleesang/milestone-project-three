@@ -1,5 +1,9 @@
 Click==7.0
+<<<<<<< HEAD
 Flask==1.1.2
+=======
+Flask==1.1.1
+>>>>>>> 0c4029646ab87ded4d799c8e06ef07edef9c5a0f
 Flask-PyMongo==2.3.0
 itsdangerous==1.1.0
 Jinja2==2.10.3
