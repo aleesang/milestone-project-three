@@ -123,6 +123,6 @@ def delete_song(song_id):
 
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('0.0.0.0'),
+    app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT', 4444)),
             debug=True)
