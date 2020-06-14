@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3 class="h-style">{{song.genre_name}}</h3>
+
+  <div class="col s12 m7">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{{song.song_image}}" alt="URL Image" style="width: 100%; height: auto;" class="responsive-img">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <ul>
+                <li>
+                    <span class="song-name">
+                        {{song.song_name}} 
+                    </span>
+                </li>
+                <li>
+                    <span class="album-name">
+                        {{song.album_name}} 
+                    </span>
+                </li>
+                <li>
+                    <span class="artist-name">
+                        {{song.artist_name}} 
+                    </span>
+                </li> 
+                <li class="spotify">
+                    <span>
+                        <iframe src="{{song.song_link}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="row card-action">
+            <form action="{{url_for('delete_song', song_id=song._id)}}" method="POST">
+                <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
+            </form>
+            <form action="{{url_for('edit_song', song_id=song._id)}}" method="POST"> 
+                <button type="submit" name="action" class="btn edit_button col s4">Edit</button> 
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

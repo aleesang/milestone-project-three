@@ -1,0 +1,252 @@
+
+@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Bebas+Neue:100,200,300,400,500,600,700");
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+ /* Header Styles */ 
+.music_library_header {
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 3em;
+    margin-top: 1em;
+    text-align: center;
+    color: rgb(133, 13, 79);
+}
+
+.music_library_small_header {
+    text-transform: capatalize;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: rgb(32, 14, 54);
+}
+
+.h-style {
+    text-transform: capatalize;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+/* Card Styling */
+.card.large {
+  height: 450px;
+}
+
+.card-title {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+/* Show Song Page Styling */
+.song-name {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5em;
+    color: rgb(145, 14, 86);
+}
+
+.album-name {
+    text-transform: capatalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.artist-name {
+    text-transform: capatalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+/* Spotify Player */
+.spotify {
+  margin-top: 1em;
+}
+
+/* Nav Bar */
+.nav-wrapper {
+    background-color: black;
+    text-transform: uppercase;
+}
+
+.dropdown-content {
+  color: #e785a6de;
+}
+
+/* Site Buttons */
+.btn {
+  margin: auto;
+}
+
+.delete_button {
+  background-color: #a84a7e;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin: 1em 1em 0 0;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.delete_button:hover {
+  color: #f7e4fc;
+  background-color: #701547;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.delete_button:active:focus {
+  color: #f7e4fc;
+}
+
+.edit_button {
+  background-color: #5c3249;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.edit_button:hover {
+  color: #f7e4fc;
+  background-color: #7e3e61;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.edit_button:active:focus {
+  color: #f7e4fc;
+}
+
+.save_button {
+  background-color: #642f4c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.save_button:hover {
+  color: #f7e4fc;
+  background-color: #701547;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.save_button:active:focus {
+  color: #f7e4fc;
+}
+
+.view_button {
+  background-color: #750d30de;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.view_button:hover {
+  color: #f7e4fc;
+  background-color: #a5005b;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.view_button:active:focus {
+  color: #f7e4fc;
+}
+
+.hover:hover{
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0.5;  
+}
+
+/* Tooltip for Adding Spotify URL */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(37, 35, 35);
+  color: #fff;
+  line-height: 2em;
+  border-radius: 6px;
+  padding: 5px 5px 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer */
+.page-footer {
+    background-color: black;
+    margin-top: 2em;
+}
+
+.footer_link {
+  color: #e785a6de;
+}
+
+.footer_link:hover {
+  color: #ca3691;
+}
+
+.footer_link:active:focus {
+  color: #f7e4fc;
+}

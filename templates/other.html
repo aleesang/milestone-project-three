@@ -1,0 +1,41 @@
+{% extends 'base.html'%} {% block content %}
+
+<div class=row>
+<div class="s12 m3 l3">
+    <h3 class="h-style">Other</h3>
+</div>
+</div>
+ 
+<div class="row">
+{% for song in songs %} 
+    <div class="col s12 m3 l3">
+        <div class="card large">
+            <div class="card-image">
+                <img src="{{song.song_image}}" alt="URL Image">
+                <span class="card-title">{{song.genre_name}}</span>
+            </div>
+            <div class="card-content">
+            <ul>
+                <li>
+                    <span class="truncate">
+                        <i class="material-icons prefix">album</i> <strong>Song Name:</strong> {{song.song_name}} 
+                    </span>
+                </li>
+                <li>
+                    <span class="truncate">
+                        <i class="material-icons prefix">account_circle</i> <strong>Artist Name:</strong> {{song.artist_name}} 
+                    </span>
+                </li>
+                <li>
+                <span>
+                <a href="{{url_for('show_song', song_id=song._id)}}" class='btn edit_button'>View Song</a>
+                    </span>
+                </li> 
+            </ul>
+            </div>
+        </div>   
+    </div>
+    {% endfor %}
+ </div>
+
+{% endblock %}
