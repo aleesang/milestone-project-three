@@ -1,1 +1,1 @@
-web: uwsgi --http :4444 --wsgi-file app.py --master --processes 4 --threads 2
+web: python3 app.py
