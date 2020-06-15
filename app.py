@@ -10,7 +10,7 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:r00tUser@cl
 
 mongo = PyMongo(app)
 
-    
+
 @app.route('/')
 def home():
     return render_template('home.html', 
@@ -68,7 +68,7 @@ def get_other():
 @app.route('/get_songs')
 def get_songs():
     return render_template('allsongs.html', 
-                           songs=mongo.db.songs.find().sort("artist_name"), 
+                           songs=mongo.db.songs.find(), 
                            genres=mongo.db.genre.find())
 
  
@@ -120,6 +120,15 @@ def update_song(song_id):
 def delete_song(song_id):
     mongo.db.songs.remove({'_id': ObjectId(song_id)})
     return redirect(url_for('get_songs'))
+
+
+def clean_song_url(song_link):
+    song_link = "https://open.spotify.com/track/0cQiqNmTIENnlviVwS4yos?si=3Xtt_hv5Tj2Acyl8CToiog"
+    song_break_down = song_link.split('/')
+    song_break_down.insert(3, 'embed')
+    result = '/'.join(song_break_down)
+    return result
+    print(clean_song_url(song_link))
 
 
 if __name__ == '__main__':
