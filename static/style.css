@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Bebas+Neue:100,200,300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Bebas+Neue:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
   body {
     display: flex;
@@ -21,13 +21,19 @@
     color: rgb(133, 13, 79);
 }
 
-.music_library_small_header {
-    text-transform: capatalize;
-    font-family: 'Bebas Neue', cursive;
+.ml_small_header {
     font-size: 2em;
     margin-bottom: 1em;
     text-align: center;
     color: rgb(32, 14, 54);
+}
+
+.uploadmusicheader {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+  color: rgb(61, 11, 122);
 }
 
 .h-style {
@@ -38,8 +44,9 @@
 }
 
 /* Card Styling */
+/* Code from https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing */
 .card.large {
-  height: 450px;
+  height: 475px;
 }
 
 .card-title {
@@ -50,6 +57,20 @@
 }
 
 /* Show Song Page Styling */
+.vsong-name {
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5em;
+  color: rgb(61, 13, 148);
+}
+
+.vartist-name {
+  text-transform: capatalize;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
 .song-name {
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
@@ -91,7 +112,7 @@
 }
 
 .delete_button {
-  background-color: #a84a7e;
+  background-color: #555254;
   color: #ffffff;
   border: none;
   border-radius: 0px;
@@ -101,17 +122,12 @@
 }
 
 .delete_button:hover {
-  color: #f7e4fc;
-  background-color: #701547;
+  background-color: #302c2e;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
-}
-
-.delete_button:active:focus {
-  color: #f7e4fc;
 }
 
 .edit_button {
@@ -125,17 +141,12 @@
 }
 
 .edit_button:hover {
-  color: #f7e4fc;
   background-color: #7e3e61;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
-}
-
-.edit_button:active:focus {
-  color: #f7e4fc;
 }
 
 .save_button {
@@ -149,17 +160,12 @@
 }
 
 .save_button:hover {
-  color: #f7e4fc;
   background-color: #701547;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
-}
-
-.save_button:active:focus {
-  color: #f7e4fc;
 }
 
 .view_button {
@@ -173,7 +179,6 @@
 }
 
 .view_button:hover {
-  color: #f7e4fc;
   background-color: #a5005b;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
@@ -181,11 +186,7 @@
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
-
-.view_button:active:focus {
-  color: #f7e4fc;
-}
-
+/* Genre Images */
 .hover:hover{
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
@@ -196,6 +197,7 @@
 }
 
 /* Tooltip for Adding Spotify URL */
+/* Code from: https://www.w3schools.com/howto/howto_css_tooltip.asp */
 .tooltip {
   position: relative;
   display: inline-block;
