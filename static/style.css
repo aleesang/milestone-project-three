@@ -1,6 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Bebas+Neue:100,200,300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
+
   body {
     display: flex;
     min-height: 100vh;
@@ -26,14 +27,6 @@
     margin-bottom: 1em;
     text-align: center;
     color: rgb(32, 14, 54);
-}
-
-.uploadmusicheader {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-align: center;
-  color: rgb(61, 11, 122);
 }
 
 .h-style {
@@ -94,6 +87,10 @@
 /* Spotify Player */
 .spotify {
   margin-top: 1em;
+}
+
+.field_space {
+  margin-bottom: 1em;
 }
 
 /* Nav Bar */
@@ -194,45 +191,6 @@
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   opacity: 0.5;  
-}
-
-/* Tooltip for Adding Spotify URL */
-/* Code from: https://www.w3schools.com/howto/howto_css_tooltip.asp */
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: rgb(37, 35, 35);
-  color: #fff;
-  line-height: 2em;
-  border-radius: 6px;
-  padding: 5px 5px 5px 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(37, 35, 35) transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }
 
 /* Footer */

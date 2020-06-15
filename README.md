@@ -1,19 +1,18 @@
 # Music Library - Milestone Project Three
 
-This project is a "Music Library", which allows musicians to share their songs with music lovers around the globe, or for music listeners to share their favourite songs from their favourite singers. Users can easily add, update, edit or delete songs in the music library.
+This project is a "Music Library", which will allow users to add their favourite tunes, so users can share and discover new music. Users can easily add, update, edit or delete songs in the music library.
 
-The aim is to easily share music from singer/song writers who want to share their songs for exposure, or for users to share their favourite songs in one music library with other music lovers. The songs are grouped into "Genres" so it can easily be identified when a user has a specific preference for a particular type of music. 
+The aim is to easily share music in one music library with other music lovers. The songs are grouped into "Genres" so it can easily be identified when a user has a specific preference for a particular type of music, or they can simply view and browse all songs in one place.
  
 ## UX
 
+The website's purpose is to provide a one stop shop for all music lovers who want to discover new songs, or share their favourite songs by linking the songs they add via Spotify. The users are able to easily navigate through the library by clicking on the different genre's, or viewing all songs in the database on one page. It's a simple repository created to meet the purpose of the website.
+
+The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
+
+Links to user stories and wireframes can be found [here.](https://en.wikipedia.org/wiki/Z)
 
 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
 
