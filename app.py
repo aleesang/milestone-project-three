@@ -1,13 +1,11 @@
 import os
-from os.path import join, dirname
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
 
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+load_dotenv('.env')
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
