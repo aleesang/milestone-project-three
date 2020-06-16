@@ -1,14 +1,18 @@
 ### macOS ###
 # General
 .DS_Store
-
-# Icon must end with two \r
-Icon
+*.pyc
+__pycache_/
+.coverage
+.cache/
+.env
+.errors.log
 
 # Thumbnails
 ._*
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
