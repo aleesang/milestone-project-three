@@ -122,13 +122,13 @@ def delete_song(song_id):
     return redirect(url_for('get_songs'))
 
 
-def clean_song_url(song_link):
-    song_link = "https://open.spotify.com/track/0cQiqNmTIENnlviVwS4yos?si=3Xtt_hv5Tj2Acyl8CToiog"
-    song_break_down = song_link.split('/')
+song_url = "https://open.spotify.com/track/0cQiqNmTIENnlviVwS4yos?si=3Xtt_hv5Tj2Acyl8CToiog"
+def clean_song_url(song_url):
+    song_break_down = song_url.split('/')
     song_break_down.insert(3, 'embed')
     result = '/'.join(song_break_down)
     return result
-    print(clean_song_url(song_link))
+print(clean_song_url(song_url))
 
 
 if __name__ == '__main__':
