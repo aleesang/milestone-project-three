@@ -4,6 +4,7 @@ from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
+from urllib.parse import urlparse, urlsplit, urljoin
 
 load_dotenv('.env')
 
@@ -126,13 +127,13 @@ def delete_song(song_id):
     return redirect(url_for('get_songs'))
 
 
-song_url = "https://open.spotify.com/track/0cQiqNmTIENnlviVwS4yos?si=3Xtt_hv5Tj2Acyl8CToiog"
-def clean_song_url(song_url):
-    song_break_down = song_url.split('/')
-    song_break_down.insert(3, 'embed')
-    result = '/'.join(song_break_down)
-    return result
-print(clean_song_url(song_url))
+song = "https://open.spotify.com/track/0cQiqNmTIENnlviVwS4yos?si=3Xtt_hv5Tj2Acyl8CToiog"
+def clean_song_url(song):
+  song_break_down = song.split('/')
+  song_break_down.insert(3, 'embed')
+  result = '/'.join(song_break_down)
+  return (clean_song_url(song))
+
 
 
 if __name__ == '__main__':

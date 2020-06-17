@@ -48,6 +48,13 @@
     font-weight: bolder;
     text-transform: uppercase;
 }
+/* make images in card same size */
+img.image-size {
+  float: left;
+  width:  400px;
+  height: 400px;
+  object-fit: cover;
+}
 
 /* Show Song Page Styling */
 .vsong-name {
