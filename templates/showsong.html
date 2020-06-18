@@ -37,7 +37,7 @@
              <!-- Modal Trigger -->
             <button data-target="confirm" class="modal-trigger btn delete_button col s4">Delete</button>
             <!-- Modal Structure -->
-                <div id="confirm" class="modal">
+                <div id="confirm" class="modal modal-width">
                     <div class="modal-content">
                         <h4><i class="material-icons">warning</i> Hold, Up!</h4>
                          <p>Are you sure you want to delete me?</p>
@@ -47,7 +47,7 @@
                         <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
                         <a href class="btn site_button modal-close col s4">Cancel</a>
                     </form>
-                    </div>
+                </div>
                 </div> 
             <form action="{{url_for('edit_song', song_id=song._id)}}" method="POST"> 
                 <button type="submit" name="action" class="btn edit_button col s4">Edit</button> 

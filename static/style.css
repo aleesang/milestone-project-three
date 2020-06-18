@@ -91,6 +91,12 @@ img.image-size {
     font-size: 1em;
 }
 
+/* Modal Styling */
+.modal-width {
+  max-height: 40%;
+  width: 20%;
+}
+
 /* Spotify Player on showpage*/
 .spotify {
   margin-top: 1em;
@@ -121,7 +127,7 @@ img.image-size {
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin: 1em 1em 1em 1em;
+  margin-left: 5px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -237,4 +243,3 @@ img.image-size {
 .footer_link:active:focus {
   color: #f7e4fc;
 }
-
