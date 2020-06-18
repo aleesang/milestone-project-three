@@ -91,16 +91,17 @@ img.image-size {
     font-size: 1em;
 }
 
-/* Spotify Player */
+/* Spotify Player on showpage*/
 .spotify {
   margin-top: 1em;
 }
 
+/* spacing inside form fields*/
 .field_space {
-  margin-bottom: 1em;
+  padding-inline: 2em;
 }
 
-/* Nav Bar */
+/* Nav Bar - changed background colour*/
 .nav-wrapper {
     background-color: black;
     text-transform: uppercase;
@@ -115,8 +116,27 @@ img.image-size {
   margin: auto;
 }
 
+.site_button {
+  background-color: #6d5d70;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px;
+  margin: 1em 1em 1em 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.site_button:hover {
+  background-color: #82808a;
+  text-decoration: none;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
 .delete_button {
-  background-color: #555254;
+  background-color: #4d4768;
   color: #ffffff;
   border: none;
   border-radius: 0px;
@@ -126,7 +146,7 @@ img.image-size {
 }
 
 .delete_button:hover {
-  background-color: #302c2e;
+  background-color: #767186;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -190,7 +210,7 @@ img.image-size {
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
 }
-/* Genre Images */
+/* Hover Effect over Genre Images */
 .hover:hover{
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
@@ -217,3 +237,4 @@ img.image-size {
 .footer_link:active:focus {
   color: #f7e4fc;
 }
+
