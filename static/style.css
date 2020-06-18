@@ -107,6 +107,14 @@ img.image-size {
   padding-inline: 2em;
 }
 
+.embedsongtext {
+  font-size: small;
+}
+
+.embedsongred {
+  color: red;
+}
+
 /* Nav Bar - changed background colour*/
 .nav-wrapper {
     background-color: black;
