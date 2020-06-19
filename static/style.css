@@ -12,6 +12,17 @@
     flex: 1 0 auto;
   }
 
+/* Nav Bar - changed background colour*/
+.nav-wrapper {
+  background-color: black;
+  text-transform: uppercase;
+}
+
+ /* vertically align materialize icons alongside text */ 
+  .material-icons{
+    vertical-align: middle;
+  }
+
  /* Header Styles */ 
 .music_library_header {
     text-transform: uppercase;
@@ -53,6 +64,14 @@ img.image-size {
   float: left;
   width:  400px;
   height: 400px;
+  object-fit: cover;
+}
+
+/* make images on showsong page same size */
+img.image-size-show {
+  float: left;
+  width:  600px;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -107,18 +126,13 @@ img.image-size {
   padding-inline: 2em;
 }
 
+/* styling for embed song text */
 .embedsongtext {
   font-size: small;
 }
 
 .embedsongred {
   color: red;
-}
-
-/* Nav Bar - changed background colour*/
-.nav-wrapper {
-    background-color: black;
-    text-transform: uppercase;
 }
 
 .dropdown-content {
