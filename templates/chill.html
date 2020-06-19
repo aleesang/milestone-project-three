@@ -6,10 +6,10 @@
 
  <div class="row">
  {% for song in songs %}
-    <div class="col s12 m3 l3">
+    <div class="col l3 m6 s12">
         <div class="card large">
             <div class="card-image">
-                <img src="{{song.song_image}}" alt="URL Image">
+                <img src="{{song.song_image}}" alt="URL Image" class="image-size">
                 <span class="card-title">{{song.genre_name}}</span>
             </div>
             <div class="card-content">
