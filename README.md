@@ -10,7 +10,12 @@ The website's purpose is to provide a one stop shop for all music lovers who wan
 
 The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
 
-Links to user stories and wireframes can be found [here.](https://en.wikipedia.org/wiki/Z)
+### User Stories
+1. As a user, I want to discover new songs and artists
+2. As a user, I want to share their favourite songs and artists with other users
+3. As a user, I want to find songs in a simple and easy to use database
+
+Links to more user stories and wireframes can be found [here.](/UX)
 
 
 

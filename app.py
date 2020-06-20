@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
+from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -9,7 +10,6 @@ load_dotenv('.env')
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
 app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
-
 
 mongo = PyMongo(app)
 
@@ -91,7 +91,7 @@ def get_songs():
                            # sort list to last inserted doc so users can find their song in list easily
                            songs=mongo.db.songs.find().sort("_id", -1), 
                            genres=mongo.db.genre.find())
-
+    
  
 # routes to individual song info
 @app.route("/show_song/<song_id>")
