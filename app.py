@@ -10,6 +10,10 @@ load_dotenv('.env')
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
 app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b080c9fe1692eb4fda735f0b3d5d99186e19247
 
 mongo = PyMongo(app)
 

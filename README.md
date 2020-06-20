@@ -10,6 +10,7 @@ The website's purpose is to provide a one stop shop for all music lovers who wan
 
 The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
 
+<<<<<<< HEAD
 ### User Stories
 1. As a user, I want to discover new songs and artists
 2. As a user, I want to share their favourite songs and artists with other users
@@ -46,6 +47,39 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
+=======
+Links to user stories and wireframes can be found [here.](https://en.wikipedia.org/wiki/Z)
+
+
+
+## Features
+
+In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+ 
+### Existing Features
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- ...
+
+For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+
+In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+
+### Features Left to Implement
+- Another feature idea
+
+## Technologies Used
+
+In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
+- [JQuery](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+
+## Testing
+
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+>>>>>>> 8b080c9fe1692eb4fda735f0b3d5d99186e19247
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
