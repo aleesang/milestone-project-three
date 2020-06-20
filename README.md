@@ -68,24 +68,22 @@ Users can add any new song to save to the music library with the following requi
 
 The following technologies were used in the making of this project.
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-    - HTML was used for constructing the base of the project
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-    - CSS for simple styling
-- [Materialize CSS](https://materializecss.com/)
-    - The main framework used to build responsive front-end design of the website.
-- [JQuery](https://jquery.com)
-    - Was used to initialise the Materialize CSS framework
+- [HTML](https://www.w3schools.com/html/) HTML was used for constructing the base of the project
+- [CSS](https://www.w3schools.com/css/) CSS for simple styling
+- [Materialize CSS](https://materializecss.com/) The main framework used to build the responsive front-end design of the website.
+- [JQuery](https://jquery.com) Was used to initialise the Materialize CSS framework
+- [Google Fonts](https://fonts.google.com/) Used as main fonts on website
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) The database used to store the music library
+- [Flask](https://www.fullstackpython.com/flask.html) The framework that was used to route python functions and link to the html pages
+- [Python](https://www.python.org/) Was used to build the functions that rendered the songs from the mongodb database
+- [Visual Studio Code](https://code.visualstudio.com/) Project was built predominately on VS Code for Mac
+- [GitHub](https://github.com/) Used for version control and repository housing
+- [Heroku](https://heroku.com) For deployment of website
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-    - Project was built predominately on VS Code for Mac
-- [GitHub](https://github.com/)
-    - Used for housing repository and version control
-
-- [Google Chrome](https://www.google.com/chrome/)
-    - Used for browser and dev tools
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new)
-    - Used for testing
+#### Technologies Used For Testing
+- [Google Chrome](https://www.google.com/chrome/) Used predominately for testing and for Inspecting via Development Tools
+- [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) For testing only
+- [Samsung Galaxy S10 5g and S20 Ultra](https://www.samsung.com.au) For mobile responsiveness
 
 ## Testing
 
