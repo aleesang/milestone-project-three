@@ -15,7 +15,7 @@ The target audience for this website are music lovers who want an easy and simpl
 2. As a user, I want to share their favourite songs and artists with other users
 3. As a user, I want to find songs in a simple and easy to use database
 
-Links to user stories and wireframes can be found [here.](https://en.wikipedia.org/wiki/Z)
+Links to user stories and wireframes can be found [here.](/UX)
 
 
 

@@ -123,6 +123,7 @@ def edit_song(song_id):
     all_genres =  mongo.db.genre.find()
     return render_template('editsongs.html', song=the_song, genres=all_genres)
 
+
 # updates song after user saves changes from edit and redirects to "all songs" page
 @app.route('/update_song/<song_id>', methods=['POST'])
 def update_song(song_id):
@@ -138,6 +139,7 @@ def update_song(song_id):
         'song_link':request.form.get('song_link'),
     })
     return redirect(url_for('get_songs'))
+
 
 # removes song after user clicks delete
 @app.route('/delete_song/<song_id>', methods=['POST'])
