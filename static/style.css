@@ -122,11 +122,6 @@ img.image-size-show {
   margin-top: 1em;
 }
 
-/* spacing inside form fields*/
-.field_space {
-  padding-inline: 10px;
-}
-
 /* styling for embed song text */
 .embedsongtext {
   font-size: small;

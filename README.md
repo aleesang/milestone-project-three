@@ -91,13 +91,20 @@ The following technologies were used in the making of this project.
 - [GitHub](https://github.com/) was used for version control and repository housing.
 - [Heroku](https://heroku.com) was used for deployment of website.
 
+
+## Testing
 #### Technologies Used For Testing
+- [HTML Validator]()
+- [CSS Validator](https://jigsaw.w3.org/css-validator) found no errors with CSS code. However found 20 warnings for:
+    -moz-transition
+    -webkit-transition
+    -o-transition
+These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
 - [Google Chrome](https://www.google.com/chrome/) was used predominately for testing and for Inspecting via Development Tools
 - [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) was used for testing only
 - [Samsung Galaxy S10 5g and S20 Ultra](https://www.samsung.com.au) used to test mobile responsiveness
 - [iPad mini](https://www.apple.com/au/ipad-mini/) was used to test alternate device responsiveness.
 
-## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 

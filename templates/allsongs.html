@@ -9,31 +9,32 @@
 <div class="row">
 {% for song in songs %} 
     <div class="col l3 m6 s12">
-      <div class="card large">
-        <div class="card-image">
-                <img class="image-size" src="{{song.song_image}}" alt="URL Image">
-                <span class="card-title">{{song.genre_name}}</span>
+        <div class="card large">
+            <div class="card-image">
+                    <img class="image-size" src="{{song.song_image}}" alt="URL Image">
+                    <span class="card-title">{{song.genre_name}}</span>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>
+                        <span class="truncate vsong-name">
+                            {{song.artist_name}} 
+                        </span>
+                    </li>
+                    <li>
+                        <span class="truncate vartist-name">
+                            {{song.song_name}} 
+                        </span>
+                    </li>
+                    <li>
+                    <span>
+                    <a href="{{url_for('show_song', song_id=song._id)}}" class='btn view_button'>View Song</a>
+                        </span>
+                    </li> 
+                </ul>
+            </div>
         </div>
-        <div class="card-content">
-            <ul>
-                <li>
-                    <span class="truncate vsong-name">
-                        {{song.artist_name}} 
-                    </span>
-                </li>
-                <li>
-                    <span class="truncate vartist-name">
-                        {{song.song_name}} 
-                    </span>
-                </li>
-                <li>
-                <span>
-                <a href="{{url_for('show_song', song_id=song._id)}}" class='btn view_button'>View Song</a>
-                    </span>
-                </li> 
-            </ul>
-        </div>
-      </div>
     </div>
 {% endfor %}
+</div>
 {% endblock %}
