@@ -20,14 +20,24 @@ Links to user stories and wireframes can be found [here.](/UX)
 ## Features
 ### Existing Features
 
-#### Home Page
-This is the landing page for the music library, explaining briefly what to expect from using the website, and displaying the 8 different images of genres of music that users can choose from.
+#### [Home Page](https://milestone-project-three-final.herokuapp.com/)
+This is the landing page for the music library, explaining briefly what to expect from using the website, and displaying the eight different images of that displays the genres of music that users can choose from.
 
 #### Genre Page (Any one of the genres)
-When a user clicks on any one of the genres, the page will show only songs that belong in that particular genre. On this page, it will show the same information that is shown on **All Songs Page** (see below).
+The genre's a user can choose from are:
+**[Chill](https://milestone-project-three-final.herokuapp.com/get_chill)**
+**[Country](https://milestone-project-three-final.herokuapp.com/get_country)**
+**[Folk](https://milestone-project-three-final.herokuapp.com/get_folk)**
+**[Pop](https://milestone-project-three-final.herokuapp.com/get_pop)**
+**[Reggae](https://milestone-project-three-final.herokuapp.com/get_reggae)**
+**[Rock](https://milestone-project-three-final.herokuapp.com/get_rock)**
+**[Urban](https://milestone-project-three-final.herokuapp.com/get_urban)**
+**[Other](https://milestone-project-three-final.herokuapp.com/get_other)**
+
+When a user clicks on any one of the genres, the page will show only songs belonging in that particular genre. On this page, it will show the same information that is shown on **All Songs Page** (see below).
 
 #### All Songs
-When users click on this page, they will be able to view all songs added to the music library. The songs are seperated into Materalize cards, and features on each card:
+When users click on this page, they will be able to view all songs added to the music library. The songs are seperated into Materalize cards, and features on each card the following:
 - Artist Image
 - Genre
 - Artist Name
@@ -68,22 +78,24 @@ Users can add any new song to save to the music library with the following requi
 
 The following technologies were used in the making of this project.
 
-- [HTML](https://www.w3schools.com/html/) HTML was used for constructing the base of the project
-- [CSS](https://www.w3schools.com/css/) CSS for simple styling
-- [Materialize CSS](https://materializecss.com/) The main framework used to build the responsive front-end design of the website.
-- [JQuery](https://jquery.com) Was used to initialise the Materialize CSS framework
-- [Google Fonts](https://fonts.google.com/) Used as main fonts on website
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) The database used to store the music library
-- [Flask](https://www.fullstackpython.com/flask.html) The framework that was used to route python functions and link to the html pages
-- [Python](https://www.python.org/) Was used to build the functions that rendered the songs from the mongodb database
-- [Visual Studio Code](https://code.visualstudio.com/) Project was built predominately on VS Code for Mac
-- [GitHub](https://github.com/) Used for version control and repository housing
-- [Heroku](https://heroku.com) For deployment of website
+- [HTML](https://www.w3schools.com/html/) was used for constructing the base of the project.
+- [CSS](https://www.w3schools.com/css/) for simple styling.
+- [Materialize CSS](https://materializecss.com/) the main framework used to build the responsive front-end design of the website.
+- [JQuery](https://jquery.com) was used to initialise the Materialize CSS framework.
+- [Google Fonts](https://fonts.google.com/) used as main fonts on website.
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database used to store the music library.
+- [Flask](https://www.fullstackpython.com/flask.html) is the framework that was used to route python functions and link to the html pages.
+- [Python](https://www.python.org/) was used to build the functions that rendered the songs from the mongodb database.
+- [Visual Studio Code](https://code.visualstudio.com/) was used to predominately build the code on Mac.
+- [GitPod](https://www.gitpod.io/) was used in the beginning of the project for code management as it's linked directly in the github repository. Switched to VS Code shortly after due to convenience.
+- [GitHub](https://github.com/) was used for version control and repository housing.
+- [Heroku](https://heroku.com) was used for deployment of website.
 
 #### Technologies Used For Testing
-- [Google Chrome](https://www.google.com/chrome/) Used predominately for testing and for Inspecting via Development Tools
-- [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) For testing only
-- [Samsung Galaxy S10 5g and S20 Ultra](https://www.samsung.com.au) For mobile responsiveness
+- [Google Chrome](https://www.google.com/chrome/) was used predominately for testing and for Inspecting via Development Tools
+- [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) was used for testing only
+- [Samsung Galaxy S10 5g and S20 Ultra](https://www.samsung.com.au) used to test mobile responsiveness
+- [iPad mini](https://www.apple.com/au/ipad-mini/) was used to test alternate device responsiveness.
 
 ## Testing
 

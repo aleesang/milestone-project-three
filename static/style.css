@@ -41,7 +41,7 @@
 }
 
 .h-style {
-    text-transform: capatalize;
+    text-transform: capitalize;
     font-family: 'Bebas Neue', cursive;
     font-size: 3em;
     margin-bottom: 1em;
@@ -84,7 +84,7 @@ img.image-size-show {
 }
 
 .vartist-name {
-  text-transform: capatalize;
+  text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
   font-size: 1.5em;
   font-style: italic;
@@ -99,14 +99,14 @@ img.image-size-show {
 }
 
 .album-name {
-    text-transform: capatalize;
+    text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
     font-style: italic;
 }
 
 .artist-name {
-    text-transform: capatalize;
+    text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
 }
@@ -124,7 +124,7 @@ img.image-size-show {
 
 /* spacing inside form fields*/
 .field_space {
-  padding-inline: 2em;
+  padding-inline: 10px;
 }
 
 /* styling for embed song text */
