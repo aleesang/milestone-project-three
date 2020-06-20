@@ -17,30 +17,75 @@ The target audience for this website are music lovers who want an easy and simpl
 
 Links to user stories and wireframes can be found [here.](/UX)
 
-
-
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+#### Home Page
+This is the landing page for the music library, explaining briefly what to expect from using the website, and displaying the 8 different images of genres of music that users can choose from.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+#### Genre Page (Any one of the genres)
+When a user clicks on any one of the genres, the page will show only songs that belong in that particular genre. On this page, it will show the same information that is shown on **All Songs Page** (see below).
+
+#### All Songs
+When users click on this page, they will be able to view all songs added to the music library. The songs are seperated into Materalize cards, and features on each card:
+- Artist Image
+- Genre
+- Artist Name
+- Song Name
+- View Song (in more detail)
+
+#### View Song
+When a user clicks on the View Song button on the song card, the user can see:
+- Artist Image
+- Genre
+- Artist Name
+- Song Name
+- Spotify Player
+- Delete and Edit buttons for whether a user wants to amend existing details or to remove the song from the library.
+
+#### Edit Song
+Users can edit any of the following details of a song already saved in the music library:
+- Genre
+- URL of Artist Image
+- Album Name
+- Song Name
+- Artist Name
+- Spotify URL
+
+#### Add Song
+Users can add any new song to save to the music library with the following required details:
+- Genre
+- URL of Artist Image
+- Album Name
+- Song Name
+- Artist Name
+- Spotify URL
 
 ### Features Left to Implement
-- Another feature idea
+- Giving users the ability to sort and filter songs on **All Songs Page**
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+The following technologies were used in the making of this project.
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    - HTML was used for constructing the base of the project
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+    - CSS for simple styling
+- [Materialize CSS](https://materializecss.com/)
+    - The main framework used to build responsive front-end design of the website.
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+    - Was used to initialise the Materialize CSS framework
 
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - Project was built predominately on VS Code for Mac
+- [GitHub](https://github.com/)
+    - Used for housing repository and version control
+
+- [Google Chrome](https://www.google.com/chrome/)
+    - Used for browser and dev tools
+- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new)
+    - Used for testing
 
 ## Testing
 
