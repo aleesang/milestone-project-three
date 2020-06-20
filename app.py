@@ -1,6 +1,5 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
-from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -10,10 +9,6 @@ load_dotenv('.env')
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
 app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
-<<<<<<< HEAD
-=======
-
->>>>>>> 8b080c9fe1692eb4fda735f0b3d5d99186e19247
 
 mongo = PyMongo(app)
 
