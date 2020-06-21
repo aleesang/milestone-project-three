@@ -104,13 +104,17 @@ Manual testing conducted were as follows:
     1. As a user, I want to discover new songs and artists.
     - **Genre Page** (Any one of the genres) - Made sure that genres were being collected and displayed correctly
     - **View Song** - When user clicks on View Song Button that they are presented with more information of the song and the spotify music player to play song.
+    
     2. As a user, I want to share my favourite songs and artists with other users by adding my own recommendations.
     - **Add Song** - When a user clicks Add Song from the navigation menu, that the form is empty and allows users to enter information in the form fields. When trying to submit the form, the user will get an error if any field is left blank. Also will get an error if wrong type of text is being inputted (eg. URL in a Text Field instead of the URL field). If a user is successful, the form routes to All Songs Page where their song appears first in the list.
+    
     3. As a user, I want to find songs in a simple and easy to use database.
     - **All Songs** - Made sure the songs were being sorted by last added, so users could find songs they just added recently and easily
+    
     4. As a user, I want the ability to edit my recommendations and remove them whenever I choose to.
     - **Edit Song** - Made sure that when the user clicks edit, that all current information is displayed in form fields already and the user can simply overwrite the information and click save to submit the changes.
     - **Delete Song** - Made sure that when a user clicks on Delete that a prompt pops up via Modal to confirm they want to remove the song from the library.
+
 - Tested the responsiveness of the website on different browsers and devices to ensure the grid system I chose to use via Materialize was responsive at different screen sizes.
 
 #### Technologies Used For Testing
@@ -142,15 +146,15 @@ The main issue I have found with testing responsiveness in particular, was the h
 This project has been deployed to Heroku [here](https://milestone-project-three-final.herokuapp.com/).
 
 1. First checked configurations in .env and ensured app.config was set correctly.
-2. Logges into Heroku CLI via **$ heroku login**, used **$ heroku git:clone -a milestone-project-three-final** to clone repository, and then used **$ git add .**, **$ git commit -a "log into heroku"**, then pushed commits to heroku via **$ git push heroku master**. 
+2. Logged into Heroku CLI via **$ heroku login**, used **$ heroku git:clone -a milestone-project-three-final** to clone repository, and then used **$ git add .**, **$ git commit -a "log into heroku"**, then pushed commits to heroku via **$ git push heroku master**. 
 - Please note, I did experience errors with the PORT timing out on many deploy attempts, and realised I hadn't connected the PORT into Heroku. 
 4. So in heroku app settings, I went to settings and set the config vars to add DATABASE_URL, IP and PORT.
 
 When running the app locally, I used **$ python3 app.py** which opens up app in the development server, and is accessed through [http://127.0.0.1:4444/](http://127.0.0.1:4444/)
 
 ## Credits
-### Code and Inspiration Used from Other Sources
-The project used inspiration or code from the below sources, and it's thanks to them I could display and have my website function the way I wanted it to.
+### Code from Other Sources
+This project used some code inspired by the below sources.
 
 - [Sort Genre Names:](https://www.w3schools.com/python/python_mongodb_sort.asp) to sort the songs on the Genre Pages by Artist Name.
 - [Fix Height of Card:](https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing) to display materialize cards all the same size, regardless of content within it.
