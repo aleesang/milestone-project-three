@@ -112,10 +112,11 @@ Manual testing conducted were as follows:
     - -moz-transition
     - webkit-transition
     - -o-transition
+
+
 These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
 - [pyTest](https://docs.pytest.org/en/stable/getting-started.html) was initially used in the beginning of my project to test app routes and defining variables
 - [Repl.It](https://repl.it/)  was used to test and validate my python code during the project.
-- [pytest](https://docs.pytest.org/en/stable/) - used to initialising testing with app routes. Didn't use throughout the project, just the beginning.
 
 
 **Browsers and Devices**
@@ -141,15 +142,24 @@ In particular, you should provide all details of the differences between the dep
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
-
 ## Credits
+### Code and Inspiration Used from Other Sources
+The project used inspiration or code from the below sources, and it's thanks to them I could display and have my website function the way I wanted it to.
+
+- [python-dotenv:](https://pypi.org/project/python-dotenv/)
+- [Sort Genre Names:](https://www.w3schools.com/python/python_mongodb_sort.asp) to sort the songs on the Genre Pages by Artist Name.
+- [Fix Height of Card:](https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing) to display materialize cards all the same size, regardless of content within it.
+- [Split and Join string:](https://realpython.com/python-string-split-concatenate-join/)
+- [sort all songs page:](https://stackoverflow.com/questions/57778658/typeerror-if-no-direction-is-specified-key-or-list-must-be-an-instance-of-list)
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- Original content was written by me.
 
 ### Media
-- The photos used in this site were obtained from ...
+- [Spotify](https://www.spotify.com/au/) - the music player for users to play and link the songs.
+- [Google](https://www.google.com.au/) - images of musicians and artists were found here.
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
+A big thanks to the following for their support and guidance on this project.
+- **Seun Owonikoko** - Mentor on this project who provided guidance
+- **Code Institute** - Re-visited Python modules to help direct me on how to create the functionality of this project.
