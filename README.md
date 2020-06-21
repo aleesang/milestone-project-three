@@ -11,11 +11,12 @@ The website's purpose is to provide a one stop shop for all music lovers who wan
 The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
 
 ### User Stories
-1. As a user, I want to discover new songs and artists
-2. As a user, I want to share their favourite songs and artists with other users
-3. As a user, I want to find songs in a simple and easy to use database
+1. As a user, I want to discover new songs and artists.
+2. As a user, I want to share my favourite songs and artists with other users by adding my own recommendations.
+3. As a user, I want to find songs in a simple and easy to use database.
+4. As a user, I want the ability to edit my recommendations and remove them whenever I choose to.
 
-Links to user stories and wireframes can be found [here.](/UX)
+Links to more user stories and wireframes can be found [here.](/UX)
 
 ## Features
 ### Existing Features
@@ -99,12 +100,17 @@ The following technologies were used in the making of this project.
 Manual testing conducted were as follows:
 - Tested navigation menu and hyperlinks work on every page and through the hamburger menu when screen is re-sized for mobile view.
 - Tested CRUD funcationality and ensured the basic functionality was passing correctly in the mongo database
+- **Using User Stories:**
+    1. As a user, I want to discover new songs and artists.
     - **Genre Page** (Any one of the genres) - Made sure that genres were being collected and displayed correctly
-    - **All Songs** - Made sure the songs were being sorted by last added, so users could find songs they just added recently and easily
     - **View Song** - When user clicks on View Song Button that they are presented with more information of the song and the spotify music player to play song.
+    2. As a user, I want to share my favourite songs and artists with other users by adding my own recommendations.
+    - **Add Song** - When a user clicks Add Song from the navigation menu, that the form is empty and allows users to enter information in the form fields. When trying to submit the form, the user will get an error if any field is left blank. Also will get an error if wrong type of text is being inputted (eg. URL in a Text Field instead of the URL field). If a user is successful, the form routes to All Songs Page where their song appears first in the list.
+    3. As a user, I want to find songs in a simple and easy to use database.
+    - **All Songs** - Made sure the songs were being sorted by last added, so users could find songs they just added recently and easily
+    4. As a user, I want the ability to edit my recommendations and remove them whenever I choose to.
     - **Edit Song** - Made sure that when the user clicks edit, that all current information is displayed in form fields already and the user can simply overwrite the information and click save to submit the changes.
     - **Delete Song** - Made sure that when a user clicks on Delete that a prompt pops up via Modal to confirm they want to remove the song from the library.
-    - **Add Song** - When a user clicks Add Song from the navigation menu, that the form is empty and allows users to enter information in the form fields. When trying to submit the form, the user will get an error if any field is left blank. Also will get an error if wrong type of text is being inputted (eg. URL in a Text Field instead of the URL field). If a user is successful, the form routes to All Songs Page where their song appears first in the list.
 - Tested the responsiveness of the website on different browsers and devices to ensure the grid system I chose to use via Materialize was responsive at different screen sizes.
 
 #### Technologies Used For Testing
