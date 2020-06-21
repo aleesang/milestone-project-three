@@ -55,7 +55,7 @@ When a user clicks on the View Song button on the song card, the user can see:
 - Spotify Player
 - Delete and Edit buttons for whether a user wants to amend existing details or to remove the song from the library.
 
-#### [Edit Song](must be clicked on View Song to Edit Page. Use example link above.)
+#### Edit Song (must be clicked on View Song to Edit Page. Use example link above.)
 Users can edit any of the following details of a song already saved in the music library:
 - Genre
 - URL of Artist Image
@@ -86,7 +86,7 @@ The following technologies were used in the making of this project.
 - [JQuery](https://jquery.com) was used to initialise the Materialize CSS framework.
 - [Google Fonts](https://fonts.google.com/) used as main fonts on website.
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database used to store the music library.
-- [python-dotenv:](https://pypi.org/project/python-dotenv/) was used to store configuration in the .env file and add them to the environment variables, separate from my code.
+- [python-dotenv](https://pypi.org/project/python-dotenv/) was used to store configuration in the .env file and add them to the environment variables, separate from my code.
 - [Flask](https://www.fullstackpython.com/flask.html) is the framework that was used to route python functions and link to the html pages.
 - [Python](https://www.python.org/) was used to build the functions that rendered the songs from the mongodb database.
 - [Visual Studio Code](https://code.visualstudio.com/) was used to predominately build the code on Mac.
@@ -119,7 +119,8 @@ Manual testing conducted were as follows:
     - -moz-transition
     - webkit-transition
     - -o-transitions
-These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
+
+These are vendor extensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
 - [pyTest](https://docs.pytest.org/en/stable/getting-started.html) was initially used in the beginning of my project to test app routes and defining variables
 - [Repl.It](https://repl.it/)  was used to test and validate my python code during the project.
 
