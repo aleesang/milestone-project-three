@@ -22,21 +22,20 @@ Links to user stories and wireframes can be found [here.](/UX)
 
 #### [Home Page](https://milestone-project-three-final.herokuapp.com/)
 This is the landing page for the music library, explaining briefly what to expect from using the website, and displaying the eight different images of that displays the genres of music that users can choose from.
-
-#### Genre Page (Any one of the genres)
+**Genres (Any one of the genres)**
 The genre's a user can choose from are:
-**[Chill](https://milestone-project-three-final.herokuapp.com/get_chill)**
-**[Country](https://milestone-project-three-final.herokuapp.com/get_country)**
-**[Folk](https://milestone-project-three-final.herokuapp.com/get_folk)**
-**[Pop](https://milestone-project-three-final.herokuapp.com/get_pop)**
-**[Reggae](https://milestone-project-three-final.herokuapp.com/get_reggae)**
-**[Rock](https://milestone-project-three-final.herokuapp.com/get_rock)**
-**[Urban](https://milestone-project-three-final.herokuapp.com/get_urban)**
-**[Other](https://milestone-project-three-final.herokuapp.com/get_other)**
+- **[Chill](https://milestone-project-three-final.herokuapp.com/get_chill)**
+- **[Country](https://milestone-project-three-final.herokuapp.com/get_country)**
+- **[Folk](https://milestone-project-three-final.herokuapp.com/get_folk)**
+- **[Pop](https://milestone-project-three-final.herokuapp.com/get_pop)**
+- **[Reggae](https://milestone-project-three-final.herokuapp.com/get_reggae)**
+- **[Rock](https://milestone-project-three-final.herokuapp.com/get_rock)**
+- **[Urban](https://milestone-project-three-final.herokuapp.com/get_urban)**
+- **[Other](https://milestone-project-three-final.herokuapp.com/get_other)**
 
 When a user clicks on any one of the genres, the page will show only songs belonging in that particular genre. On this page, it will show the same information that is shown on **All Songs Page** (see below).
 
-#### All Songs
+#### [All Songs](https://milestone-project-three-final.herokuapp.com/get_songs)
 When users click on this page, they will be able to view all songs added to the music library. The songs are seperated into Materalize cards, and features on each card the following:
 - Artist Image
 - Genre
@@ -44,7 +43,7 @@ When users click on this page, they will be able to view all songs added to the 
 - Song Name
 - View Song (in more detail)
 
-#### View Song
+#### [View Song](https://milestone-project-three-final.herokuapp.com/show_song/5ee38a068423865c031b0e2d) - (example)
 When a user clicks on the View Song button on the song card, the user can see:
 - Artist Image
 - Genre
@@ -53,7 +52,7 @@ When a user clicks on the View Song button on the song card, the user can see:
 - Spotify Player
 - Delete and Edit buttons for whether a user wants to amend existing details or to remove the song from the library.
 
-#### Edit Song
+#### [Edit Song](https://milestone-project-three-final.herokuapp.com/edit_song/)
 Users can edit any of the following details of a song already saved in the music library:
 - Genre
 - URL of Artist Image
@@ -62,7 +61,7 @@ Users can edit any of the following details of a song already saved in the music
 - Artist Name
 - Spotify URL
 
-#### Add Song
+#### [Add Song](https://milestone-project-three-final.herokuapp.com/add_song/)
 Users can add any new song to save to the music library with the following required details:
 - Genre
 - URL of Artist Image
@@ -93,36 +92,39 @@ The following technologies were used in the making of this project.
 
 
 ## Testing
+#### Manual Testing
+Manual testing conducted were as follows:
+- Tested navigation menu and hyperlinks work on every page and through the hamburger menu when screen is re-sized for mobile view.
+- Tested CRUD funcationality and ensure the basic functionality was passing correctly in the mongo database (Explained more below)
+    - **Genre Page** (Any one of the genres) - Made sure that genres were being collected and displayed correctly
+    - **All Songs** - Made sure the songs were being sorted by last added, so users could find songs they just added recently and easily
+    - **View Song** - When user clicks on View Song Button that they are presented with more information of the song and a music player to play song.
+    - **Edit Song** - Made sure that when the user clicks edit, that all current information is displayed in form fields and the user can simply overwrite the information and click save to submit the changes.
+    - **Delete Song** - Made sure that when a user clicks on Delete that a prompt pops up via Modal to confirm they want to remove the song from the library.
+    - **Add Song** - When a user clicks Add Song from the navigation menu, that the form is empty and allows users to enter information in the form fields. When trying to submit the form, the user will get an error if any field is left blank. Also will get an error if wrong type of text is being inputted (eg. URL in a Text Field instead of the URL field). If a user is successful, the form routes to All Songs Page where their song appears first in the list.
+- Tested the responsiveness of the website on different browsers and devices to ensure the grid system I chose to use via Materialize was responsive at different screen sizes.
+
 #### Technologies Used For Testing
-- [HTML Validator]()
+- [HTML Validator](https://validator.w3.org/) found no html errors, but errors pertaining to use of python/flask in code show as errors or warnings in the validator.
 - [CSS Validator](https://jigsaw.w3.org/css-validator) found no errors with CSS code. However found 20 warnings for:
     -moz-transition
     -webkit-transition
     -o-transition
 These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
+- [pyTest](https://docs.pytest.org/en/stable/getting-started.html) was initially used in the beginning of my project to test app routes and defining variables
+- [Repl.It](https://repl.it/)  was used to test and validate my python code during the project.
+- [pytest](https://docs.pytest.org/en/stable/) - used to initialising testing with app routes. Didn't use throughout the project, just the beginning.
+**Browsers and Devices**
 - [Google Chrome](https://www.google.com/chrome/) was used predominately for testing and for Inspecting via Development Tools
 - [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) was used for testing only
+- [Safari](https://www.apple.com/au/safari/) was used for testing only.
 - [Samsung Galaxy S10 5g and S20 Ultra](https://www.samsung.com.au) used to test mobile responsiveness
 - [iPad mini](https://www.apple.com/au/ipad-mini/) was used to test alternate device responsiveness.
+- [MacBook Pro 13 inch 2017](https://support.apple.com/kb/SP754?locale=en_AU) was the main device used for building the project and testing
+- [HP Elitebook 14 inch](https://en.wikipedia.org/wiki/HP_EliteBook) was used as another device to check responsiveness
 
+The main issue I have found with testing responsiveness in particular, was the horizontal card display I chose for the **View Song** page. The image does not stack above the row, but rather stays in the same row and is squashed in mobile view. At this time, it is the only problem I am encountering.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
