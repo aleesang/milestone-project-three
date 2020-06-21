@@ -6,7 +6,7 @@ The aim is to easily share music in one music library with other music lovers. T
  
 ## UX
 
-The website's purpose is to provide a one stop shop for all music lovers who want to discover new songs, or share their favourite songs by linking the songs they add via Spotify. The users are able to easily navigate through the library by clicking on the different genre's, or viewing all songs in the database on one page. It's a simple repository created to meet the purpose of the website.
+The website's purpose is to provide a one stop shop for all music lovers who want to discover new songs, or share their favourite songs by linking the songs they add via [Spotify](https://www.spotify.com/au/). The users are able to easily navigate through the library by clicking on the different genre's, or viewing all songs in the database on one page. It's a simple repository created to meet the purpose of the website.
 
 The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
 
@@ -54,7 +54,7 @@ When a user clicks on the View Song button on the song card, the user can see:
 - Spotify Player
 - Delete and Edit buttons for whether a user wants to amend existing details or to remove the song from the library.
 
-#### [Edit Song](https://milestone-project-three-final.herokuapp.com/edit_song/5ee38a068423865c031b0e2d) - (example)
+#### [Edit Song](must be clicked on View Song to Edit Page. Use example link above.)
 Users can edit any of the following details of a song already saved in the music library:
 - Genre
 - URL of Artist Image
@@ -85,6 +85,7 @@ The following technologies were used in the making of this project.
 - [JQuery](https://jquery.com) was used to initialise the Materialize CSS framework.
 - [Google Fonts](https://fonts.google.com/) used as main fonts on website.
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database used to store the music library.
+- [python-dotenv:](https://pypi.org/project/python-dotenv/) was used to store configuration in the .env file and add them to the environment variables, separate from my code.
 - [Flask](https://www.fullstackpython.com/flask.html) is the framework that was used to route python functions and link to the html pages.
 - [Python](https://www.python.org/) was used to build the functions that rendered the songs from the mongodb database.
 - [Visual Studio Code](https://code.visualstudio.com/) was used to predominately build the code on Mac.
@@ -111,9 +112,7 @@ Manual testing conducted were as follows:
 - [CSS Validator](https://jigsaw.w3.org/css-validator) found no errors with CSS code. However found 20 warnings for:
     - -moz-transition
     - webkit-transition
-    - -o-transition
-
-
+    - -o-transitions
 These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
 - [pyTest](https://docs.pytest.org/en/stable/getting-started.html) was initially used in the beginning of my project to test app routes and defining variables
 - [Repl.It](https://repl.it/)  was used to test and validate my python code during the project.
@@ -133,24 +132,22 @@ The main issue I have found with testing responsiveness in particular, was the h
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This project has been deployed to Heroku [here](https://milestone-project-three-final.herokuapp.com/).
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+1. First checked configurations in .env and ensured app.config was set correctly.
+2. Logges into Heroku CLI via **$ heroku login**, used **$ heroku git:clone -a milestone-project-three-final** to clone repository, and then used **$ git add .**, **$ git commit -a "log into heroku"**, then pushed commits to heroku via **$ git push heroku master**. 
+- Please note, I did experience errors with the PORT timing out on many deploy attempts, and realised I hadn't connected the PORT into Heroku. 
+4. So in heroku app settings, I went to settings and set the config vars to add DATABASE_URL, IP and PORT.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+When running the app locally, I used **$ python3 app.py** which opens up app in the development server, and is accessed through [http://127.0.0.1:4444/](http://127.0.0.1:4444/)
 
 ## Credits
 ### Code and Inspiration Used from Other Sources
 The project used inspiration or code from the below sources, and it's thanks to them I could display and have my website function the way I wanted it to.
 
-- [python-dotenv:](https://pypi.org/project/python-dotenv/)
 - [Sort Genre Names:](https://www.w3schools.com/python/python_mongodb_sort.asp) to sort the songs on the Genre Pages by Artist Name.
 - [Fix Height of Card:](https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing) to display materialize cards all the same size, regardless of content within it.
-- [Split and Join string:](https://realpython.com/python-string-split-concatenate-join/)
-- [sort all songs page:](https://stackoverflow.com/questions/57778658/typeerror-if-no-direction-is-specified-key-or-list-must-be-an-instance-of-list)
+- [Sort All Songs Page to Last Added:](https://stackoverflow.com/questions/57778658/typeerror-if-no-direction-is-specified-key-or-list-must-be-an-instance-of-list)
 
 ### Content
 - Original content was written by me.
