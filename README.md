@@ -1,6 +1,6 @@
 # Music Library - Milestone Project Three
 
-![YOUMusic](UX/music_library_responsive.png)
+![YOUMusic](UX/music_library_responsive.png)(#)
 
 This project is a "Music Library", which will allow users to add their favourite tunes, so users can share and discover new music. Users can easily add, update, edit or delete songs in the music library.
 
