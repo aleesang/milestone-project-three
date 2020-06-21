@@ -22,6 +22,8 @@ Links to user stories and wireframes can be found [here.](/UX)
 
 #### [Home Page](https://milestone-project-three-final.herokuapp.com/)
 This is the landing page for the music library, explaining briefly what to expect from using the website, and displaying the eight different images of that displays the genres of music that users can choose from.
+
+
 **Genres (Any one of the genres)**
 The genre's a user can choose from are:
 - **[Chill](https://milestone-project-three-final.herokuapp.com/get_chill)**
@@ -52,7 +54,7 @@ When a user clicks on the View Song button on the song card, the user can see:
 - Spotify Player
 - Delete and Edit buttons for whether a user wants to amend existing details or to remove the song from the library.
 
-#### [Edit Song](https://milestone-project-three-final.herokuapp.com/edit_song/)
+#### [Edit Song](https://milestone-project-three-final.herokuapp.com/edit_song/5ee38a068423865c031b0e2d) - (example)
 Users can edit any of the following details of a song already saved in the music library:
 - Genre
 - URL of Artist Image
@@ -88,18 +90,18 @@ The following technologies were used in the making of this project.
 - [Visual Studio Code](https://code.visualstudio.com/) was used to predominately build the code on Mac.
 - [GitPod](https://www.gitpod.io/) was used in the beginning of the project for code management as it's linked directly in the github repository. Switched to VS Code shortly after due to convenience.
 - [GitHub](https://github.com/) was used for version control and repository housing.
-- [Heroku](https://heroku.com) was used for deployment of website.
+- [Heroku](https://heroku.com) was used for the deployment of website.
 
 
 ## Testing
 #### Manual Testing
 Manual testing conducted were as follows:
 - Tested navigation menu and hyperlinks work on every page and through the hamburger menu when screen is re-sized for mobile view.
-- Tested CRUD funcationality and ensure the basic functionality was passing correctly in the mongo database (Explained more below)
+- Tested CRUD funcationality and ensured the basic functionality was passing correctly in the mongo database
     - **Genre Page** (Any one of the genres) - Made sure that genres were being collected and displayed correctly
     - **All Songs** - Made sure the songs were being sorted by last added, so users could find songs they just added recently and easily
-    - **View Song** - When user clicks on View Song Button that they are presented with more information of the song and a music player to play song.
-    - **Edit Song** - Made sure that when the user clicks edit, that all current information is displayed in form fields and the user can simply overwrite the information and click save to submit the changes.
+    - **View Song** - When user clicks on View Song Button that they are presented with more information of the song and the spotify music player to play song.
+    - **Edit Song** - Made sure that when the user clicks edit, that all current information is displayed in form fields already and the user can simply overwrite the information and click save to submit the changes.
     - **Delete Song** - Made sure that when a user clicks on Delete that a prompt pops up via Modal to confirm they want to remove the song from the library.
     - **Add Song** - When a user clicks Add Song from the navigation menu, that the form is empty and allows users to enter information in the form fields. When trying to submit the form, the user will get an error if any field is left blank. Also will get an error if wrong type of text is being inputted (eg. URL in a Text Field instead of the URL field). If a user is successful, the form routes to All Songs Page where their song appears first in the list.
 - Tested the responsiveness of the website on different browsers and devices to ensure the grid system I chose to use via Materialize was responsive at different screen sizes.
@@ -107,13 +109,15 @@ Manual testing conducted were as follows:
 #### Technologies Used For Testing
 - [HTML Validator](https://validator.w3.org/) found no html errors, but errors pertaining to use of python/flask in code show as errors or warnings in the validator.
 - [CSS Validator](https://jigsaw.w3.org/css-validator) found no errors with CSS code. However found 20 warnings for:
-    -moz-transition
-    -webkit-transition
-    -o-transition
+    - -moz-transition
+    - webkit-transition
+    - -o-transition
 These are vendor etensions that help support browser compatibility efforts, which will always show as "invalid" on the CSS Validator.
 - [pyTest](https://docs.pytest.org/en/stable/getting-started.html) was initially used in the beginning of my project to test app routes and defining variables
 - [Repl.It](https://repl.it/)  was used to test and validate my python code during the project.
 - [pytest](https://docs.pytest.org/en/stable/) - used to initialising testing with app routes. Didn't use throughout the project, just the beginning.
+
+
 **Browsers and Devices**
 - [Google Chrome](https://www.google.com/chrome/) was used predominately for testing and for Inspecting via Development Tools
 - [Mozilla Firefox](https://www.mozilla.org/en-US/exp/) was used for testing only
