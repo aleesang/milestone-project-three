@@ -14,6 +14,7 @@ app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
 
 mongo = PyMongo(app)
 
+# for sharing on socials on view song page
 share.init_app(app)
 
 # routes to home page

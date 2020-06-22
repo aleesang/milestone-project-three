@@ -47,6 +47,11 @@
     margin-bottom: 1em;
 }
 
+.sharesocials {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
 /* Card Styling */
 /* Code from https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing */
 .card.large {
@@ -78,7 +83,7 @@ img.image-size-show {
 /* Show Song Page Styling */
 .vsong-name {
   text-transform: uppercase;
-  font-family: 'Bebas Neue', cursive;
+  font-family: '', cursive;
   font-size: 2.5em;
   color: rgb(61, 13, 148);
 }
@@ -256,20 +261,4 @@ img.image-size-show {
 
 .footer_link:active:focus {
   color: #f7e4fc;
-}
-
-.pagination-page-info {
-  padding: .6em;
-  padding-left: 0;
-  width: 40em;
-  margin: .5em;
-  margin-left: 0;
-  font-size: 12px;
-}
-.pagination-page-info b {
-  color: black;
-  background: #6aa6ed;
-  padding-left: 2px;
-  padding: .1em .25em;
-  font-size: 150%;
 }

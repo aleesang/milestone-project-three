@@ -3,14 +3,14 @@
 <h3 class="h-style">{{song.genre_name}}</h3>
 {{ share.load() }}
  <!-- Card info Section--> 
-  <div class="col l3 m6 s12">
+<div class="col l3 m6 s12">
     <div class="card horizontal">
-      <div class="card-image">
-        <img src="{{song.song_image}}" alt="URL Image" class="image-size-show">
-      </div>
-      <div class="card-stacked">
+        <div class="card-image">
+            <img src="{{song.song_image}}" alt="URL Image" class="image-size-show">
+        </div>
+    <div class="card-stacked">
         <div class="card-content">
-          <ul>
+            <ul>
                 <li>
                     <span class="song-name">
                         {{song.song_name}} 
@@ -33,30 +33,35 @@
                 </li>
             </ul>
         </div>
-    <!-- Edit/Delete Section-->    
+    <!-- Share/Edit/Delete Section-->    
         <div class="row card-action">
-             <!-- Modal Trigger -->
-            <button data-target="confirm" class="modal-trigger btn delete_button col s4">Delete</button>
+            <div class="col s12">
+        <!-- Share on socials -->
+                <strong class="sharesocials">Share With:</strong> {{ share.create(sites='facebook, twitter, google') }}
+            </div>
+             <!-- Modal Trigger on Delete Button-->
+            <div class="col s12">
+                <button data-target="confirm" class="modal-trigger btn delete_button col s4">Delete</button>
+                <form action="{{url_for('edit_song', song_id=song._id)}}" method="POST"> 
+                <button type="submit" name="action" class="btn edit_button col s4">Edit</button> 
+                </form>
+            </div>
+        </div>
             <!-- Modal Structure -->
                 <div id="confirm" class="modal modal-width">
                     <div class="modal-content">
                         <h4><i class="material-icons">warning</i> Hold, Up!</h4>
                          <p>Are you sure you want to delete me?</p>
                     </div>
-                <div class="modal-footer">
+                    <div class="modal-footer">
                     <form action="{{url_for('delete_song', song_id=song._id)}}" method="POST">
                         <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
                         <a href class="btn site_button modal-close col s4">Cancel</a>
                     </form>
-                </div>
+                    </div>
                 </div> 
-            <form action="{{url_for('edit_song', song_id=song._id)}}" method="POST"> 
-                <button type="submit" name="action" class="btn edit_button col s4">Edit</button> 
-            </form>
-        </div>
       </div>
     </div>
-     {{ share.create(title='Share with: ') }}
   </div>
 
 {% endblock %}
