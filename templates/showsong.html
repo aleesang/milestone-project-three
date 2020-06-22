@@ -36,8 +36,8 @@
     <!-- Share/Edit/Delete Section-->    
         <div class="row card-action">
             <div class="col s12 m6 l6">
-        <!-- Share on socials -->
-                <strong class="sharesocials">Share With:</strong> {{ share.create(sites='facebook, twitter') }}
+        <!-- Share on socials - API from https://flask-share.readthedocs.io/en/latest/ -->
+                <strong class="sharesocials">Share With:</strong> {{ share.create(sites='facebook, twitter', mobile_sites='facebook, twitter') }}
             </div>
              <!-- Modal Trigger on Delete Button-->
             <div class="col s12">
