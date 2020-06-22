@@ -88,9 +88,10 @@ The following technologies were used in the making of this project.
 - [JQuery](https://jquery.com) was used to initialise the Materialize CSS framework.
 - [Google Fonts](https://fonts.google.com/) used as main fonts on website.
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database used to store the music library.
-- [python-dotenv](https://pypi.org/project/python-dotenv/) was used to store configuration in the .env file and add them to the environment variables, separate from my code.
 - [Flask](https://www.fullstackpython.com/flask.html) is the framework that was used to route python functions and link to the html pages.
 - [Python](https://www.python.org/) was used to build the functions that rendered the songs from the mongodb database.
+- [python-dotenv](https://pypi.org/project/python-dotenv/) was used to store configuration in the .env file and add them to the environment variables, separate from my code.
+- [flask-share](https://flask-share.readthedocs.io/en/latest/) is used as a means to share any song on social media via the View Song Page. (this suggestion was made by my mentor Seun Owonikoko)
 - [Visual Studio Code](https://code.visualstudio.com/) was used to predominately build the code on Mac.
 - [GitPod](https://www.gitpod.io/) was used in the beginning of the project for code management as it's linked directly in the github repository. Switched to VS Code shortly after due to convenience.
 - [GitHub](https://github.com/) was used for version control and repository housing.
