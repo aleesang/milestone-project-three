@@ -6,7 +6,7 @@
 <div class="col l3 m6 s12">
     <div class="card horizontal">
         <div class="card-image">
-            <img src="{{song.song_image}}" alt="URL Image" class="image-size-show">
+            <img class="hide-on-small-only" src="{{song.song_image}}" alt="URL Image" class="image-size-show">
         </div>
     <div class="card-stacked">
         <div class="card-content">
@@ -35,9 +35,9 @@
         </div>
     <!-- Share/Edit/Delete Section-->    
         <div class="row card-action">
-            <div class="col s12">
+            <div class="col s12 m6 l6">
         <!-- Share on socials -->
-                <strong class="sharesocials">Share With:</strong> {{ share.create(sites='facebook, twitter, google') }}
+                <strong class="sharesocials">Share With:</strong> {{ share.create(sites='facebook, twitter') }}
             </div>
              <!-- Modal Trigger on Delete Button-->
             <div class="col s12">
@@ -63,5 +63,4 @@
       </div>
     </div>
   </div>
-
 {% endblock %}
