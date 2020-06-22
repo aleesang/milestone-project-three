@@ -141,8 +141,6 @@ These are vendor extensions that help support browser compatibility efforts, whi
 - [MacBook Pro 13 inch 2017](https://support.apple.com/kb/SP754?locale=en_AU) was the main device used for building the project and testing
 - [HP Elitebook 14 inch](https://en.wikipedia.org/wiki/HP_EliteBook) was used as another device to check responsiveness
 
-The main issue I have found with testing responsiveness in particular, was the horizontal card display I chose for the **View Song** page. The image does not stack above the row, but rather stays in the same row and is squashed in mobile view. At this time, it is the only problem I am encountering.
-
 
 ## Deployment
 
