@@ -5,6 +5,8 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 from dotenv import load_dotenv
 load_dotenv('.env')
+from flask_share import Share
+share = Share()
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'Music_Library'
@@ -12,6 +14,7 @@ app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
 
 mongo = PyMongo(app)
 
+share.init_app(app)
 
 # routes to home page
 @app.route('/')
@@ -88,10 +91,9 @@ def get_other():
 def get_songs():
     return render_template('allsongs.html', 
                            # sort list to last inserted doc so users can find their song in list easily
-                           songs=mongo.db.songs.find().sort("_id", -1), 
-                           genres=mongo.db.genre.find())
-    
- 
+                           songs=mongo.db.songs.find().sort("_id", -1))
+                           
+                           
 # routes to individual song info
 @app.route("/show_song/<song_id>")
 def show_song(song_id):

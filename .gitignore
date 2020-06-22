@@ -8,6 +8,7 @@ __pycache_/
 .errors.log
 Pipfile
 Pipfile.lock
+.gitattributes
 
 # Thumbnails
 ._*

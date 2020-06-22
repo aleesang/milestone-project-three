@@ -1,6 +1,6 @@
 # Music Library - Milestone Project Three
 
-![YOUMusic](UX/music_library_responsive.png)(#)
+![YOUMusic](UX/music_library_responsive.png)
 
 This project is a "Music Library", which will allow users to add their favourite tunes, so users can share and discover new music. Users can easily add, update, edit or delete songs in the music library.
 
@@ -160,7 +160,7 @@ This project used some code inspired by the below sources.
 
 - [Sort Genre Names:](https://www.w3schools.com/python/python_mongodb_sort.asp) to sort the songs on the Genre Pages by Artist Name.
 - [Fix Height of Card:](https://stackoverflow.com/questions/61819829/materialize-grid-columns-overflowing) to display materialize cards all the same size, regardless of content within it.
-- [Sort All Songs Page to Last Added:](https://stackoverflow.com/questions/57778658/typeerror-if-no-direction-is-specified-key-or-list-must-be-an-instance-of-list)
+- [Sort All Songs Page to Last Added:](https://stackoverflow.com/questions/57778658/typeerror-if-no-direction-is-specified-key-or-list-must-be-an-instance-of-list) to sort songs on "All Songs Page" by last added.
 
 ### Content
 - Original content was written by me.
@@ -171,5 +171,5 @@ This project used some code inspired by the below sources.
 
 ### Acknowledgements
 A big thanks to the following for their support and guidance on this project.
-- **Seun Owonikoko** - Mentor on this project who provided guidance
+- **Seun Owonikoko** - Mentor on this project who provided helpful tips, guidance and suggestions for consideration.
 - **Code Institute** - Re-visited Python modules to help direct me on how to create the functionality of this project.
