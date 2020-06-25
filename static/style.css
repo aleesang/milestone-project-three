@@ -56,6 +56,7 @@ main {
   font-weight: bolder;
   text-transform: uppercase;
 }
+
 /* make images in card same size */
 img.image-size {
   float: left;
@@ -133,7 +134,7 @@ img.image-size-show {
   margin: auto;
 }
 
-.site_button {
+.cancel_button {
   background-color: #6d5d70;
   color: #ffffff;
   border: none;
@@ -143,7 +144,7 @@ img.image-size-show {
   font-family: "Poppins", sans-serif;
 }
 
-.site_button:hover {
+.cancel_button:hover {
   background-color: #82808a;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
@@ -153,7 +154,7 @@ img.image-size-show {
 }
 
 .delete_button {
-  background-color: #4d4768;
+  background-color: #b1152a;
   color: #ffffff;
   border: none;
   border-radius: 0px;
@@ -163,7 +164,7 @@ img.image-size-show {
 }
 
 .delete_button:hover {
-  background-color: #767186;
+  background-color: #912331;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -172,7 +173,7 @@ img.image-size-show {
 }
 
 .edit_button {
-  background-color: #7f088a;
+  background-color: #380c70;
   color: #ffffff;
   border: none;
   border-radius: 0px;
@@ -182,7 +183,7 @@ img.image-size-show {
 }
 
 .edit_button:hover {
-  background-color: #9e099e;
+  background-color: #280952;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
