@@ -1,33 +1,37 @@
 {% extends 'base.html'%} {% block content %}
-
-<div class=row>
+<!-- Title -->
 <div class="col s12">
     <h3 class="h-style">Urban</h3>
 </div>
-</div>
- 
-<div class="row">
-{% for song in songs %} 
+
+<!-- Start of Song Card -->
+ <div class="row">
+ {% for song in songs %}
+    <!-- Song image -->
     <div class="col l3 m6 s12">
         <div class="card large">
             <div class="card-image">
                     <img class="image-size" src="{{song.song_image}}" alt="URL Image">
                     <span class="card-title">{{song.genre_name}}</span>
             </div>
+            <!--Song content-->
             <div class="card-content">
                 <ul>
                     <li>
+                        <!--Artist name-->
                         <span class="vartist-name">
                             {{song.artist_name}} 
                         </span>
                     </li>
                     <li>
+                        <!--Song name-->
                         <span class="truncate vsong-name">
                             {{song.song_name}} 
                         </span>
                     </li>
                     <li>
                     <span>
+                    <!--Button to view song information-->
                     <a href="{{url_for('show_song', song_id=song._id)}}" class='btn view_button'>View Song</a>
                         </span>
                     </li> 
@@ -35,7 +39,7 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+{% endfor %}
  </div>
   
 {% endblock %}

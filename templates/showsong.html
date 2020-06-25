@@ -1,31 +1,37 @@
 {% extends 'base.html' %} {% block content %}
-
+<!-- Title -->
 <h3 class="h-style">{{song.genre_name}}</h3>
 {{ share.load() }}
  <!-- Card info Section--> 
 <div class="col l3 m6 s12">
     <div class="card horizontal">
+    <!-- Song Image -->
         <div class="card-image">
             <img class="hide-on-small-only" src="{{song.song_image}}" alt="URL Image" class="image-size-show">
         </div>
     <div class="card-stacked">
+        <!-- Song content -->
         <div class="card-content">
             <ul>
                 <li>
+                    <!-- Song name -->
                     <span class="song-name">
                         {{song.song_name}} 
                     </span>
                 </li>
                 <li>
+                    <!-- album name -->
                     <span class="album-name">
                         {{song.album_name}} 
                     </span>
                 </li>
                 <li>
+                    <!-- artist name -->
                     <span class="artist-name">
                         {{song.artist_name}} 
                     </span>
                 </li> 
+                <!-- Spotify player -->
                 <li class="spotify">
                     <span>
                         <iframe src="{{song.song_link}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

@@ -1,16 +1,14 @@
-
 @import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
 
 /* Nav Bar - changed background colour*/
 .nav-wrapper {
@@ -18,32 +16,32 @@
   text-transform: uppercase;
 }
 
- /* vertically align materialize icons alongside text */ 
-  .material-icons{
-    vertical-align: middle;
-  }
+/* vertically align materialize icons alongside text */
+.material-icons {
+  vertical-align: middle;
+}
 
- /* Header Styles */ 
+/* Header Styles */
 .music_library_header {
-    text-transform: uppercase;
-    font-family: 'Anton', sans-serif;
-    font-size: 3em;
-    margin-top: 1em;
-    text-align: center;
-    color: rgb(133, 13, 79);
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-size: 3em;
+  margin-top: 1em;
+  text-align: center;
+  color: rgb(133, 13, 79);
 }
 
 .h-style {
-    text-transform: uppercase;
-    font-family: 'Anton', sans-serif;
-    font-size: 3em;
-    margin-bottom: 1em;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  font-size: 3em;
+  margin-bottom: 1em;
 }
 
- /* Share Socials on View Song Page */ 
+/* Share Socials on View Song Page */
 .sharesocials {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 /* Card Styling */
@@ -53,15 +51,15 @@
 }
 
 .card-title {
-    background-color: black;
-    color: white;
-    font-weight: bolder;
-    text-transform: uppercase;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 /* make images in card same size */
 img.image-size {
   float: left;
-  width:  400px;
+  width: 400px;
   height: 400px;
   object-fit: cover;
 }
@@ -69,45 +67,45 @@ img.image-size {
 /* make images on showsong page same size */
 img.image-size-show {
   float: left;
-  width:  600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
 }
 
 /* Show Song Page Styling */
 .vsong-name {
   text-transform: capitalize;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1em;
   color: rgb(61, 13, 148);
 }
 
 .vartist-name {
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   font-style: italic;
 }
 
 /* All Songs and Genre Page Styling */
 .song-name {
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5em;
-    color: rgb(145, 14, 86);
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  color: rgb(145, 14, 86);
 }
 
 .album-name {
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-    font-style: italic;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 .artist-name {
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 
 /* Modal Styling */
@@ -159,7 +157,7 @@ img.image-size-show {
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin: 1em 1em 0 0;
+  margin: 1em 1em 1em 1em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -174,17 +172,17 @@ img.image-size-show {
 }
 
 .edit_button {
-  background-color: #5c3249;
+  background-color: #7f088a;
   color: #ffffff;
   border: none;
   border-radius: 0px;
-  margin-top: 1em;
+  margin: 1em 1em 1em 1em;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
 
 .edit_button:hover {
-  background-color: #7e3e61;
+  background-color: #9e099e;
   text-decoration: none;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -230,19 +228,19 @@ img.image-size-show {
   -o-transition: all 0.35s ease-in-out;
 }
 /* Hover Effect over Genre Images */
-.hover:hover{
+.hover:hover {
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -ms-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  opacity: 0.5;  
+  opacity: 0.5;
 }
 
 /* Footer */
 .page-footer {
-    background-color: black;
-    margin-top: 2em;
+  background-color: black;
+  margin-top: 2em;
 }
 
 .footer_link {

@@ -1,7 +1,9 @@
 {% extends 'base.html'%} {% block content %}
-
+<!-- Title-->
 <h3><i class="medium material-icons prefix">add</i> Add Song</h3>
+<!-- Start of Add Song Form -->
 <div class="row">
+<!-- Drop down of genre options -->
     <form action="{{ url_for('insert_song') }}" method="POST" class="col s12">
             <div class="input-field col s12"><i class="material-icons prefix">apps</i>
                     <select id="genres"  name="genre_name" class="form-control">
@@ -9,34 +11,40 @@
                         {% for song in genres %}
                         <option value="{{song.genre_name}}">{{song.genre_name}}</option>
                         {% endfor %}
-                    </select>
+                    </select>    
                 <label>Song Genre</label>
             </div>
+            <!-- Add image url field -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix">add_a_photo</i>
                 <label for="song_image">URL of Artist Image</label>
                 <input id="song_image" name="song_image" type="text" required>
             </div>
+            <!-- Add album name -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix">album</i>
                 <label for="album_name">Album Name</label>
                 <input id="album_name" name="album_name" type="text" required>
             </div>
+            <!-- Add song name -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix">art_track</i>
                 <input id="song_name" name="song_name" type="text" required>
                 <label for="song_name">Song Name</label>
             </div>
+            <!-- Add artist name -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="artist_name" name="artist_name" type="text" required>
                 <label for="artist_name">Artist Name</label>
             </div>
+            <!-- Add Spotify embed song url -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix">music_note</i>
                 <input id="song_link" name="song_link" type="url" required>
                 <label for="artist_name">Spotify Embed URL (Read Instructions Below)</label>
             </div>
+            <!-- Embed song instructions -->    
             <div class="row embedsongtext">
             <strong>Inserting <span class="embedsongred">embed</span> in the Song URL</strong>
                                             <br>1. Open Spotify Web Player.
@@ -44,6 +52,7 @@
                                             <br>3. Click on the elipses <strong>(...)</strong> and click <strong class="embedsongred">Copy Song Link</strong>.
                                             <br>4. Paste the link in the above field and insert <strong class="embedsongred">embed/</strong> directly after .com/ so it should look like this: https://open.spotify.com<strong class="embedsongred">/embed</strong>/track/3MjUtNVVq3C8Fn0MP3zhXa?si=h2ov3JYWRJ63xsDWH-eHmw
             </div>
+        <!-- Submit new song button -->    
         <div class="row">
             <button class="btn save_button" type="submit" name="action">Add Song
                 <i class="material-icons right">send</i>
@@ -51,6 +60,5 @@
         </div>
     </form> 
 </div>
-
 
 {% endblock %}
