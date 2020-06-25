@@ -10,6 +10,12 @@ main {
   flex: 1 0 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .hide-on-small{
+    display:block !important
+  }
+}
+
 /* Nav Bar - changed background colour*/
 .nav-wrapper {
   background-color: black;
@@ -57,7 +63,7 @@ main {
   text-transform: uppercase;
 }
 
-/* make images in card same size */
+/* make images in card same size on all songs and genres page*/
 img.image-size {
   float: left;
   width: 400px;
@@ -68,8 +74,8 @@ img.image-size {
 /* make images on showsong page same size */
 img.image-size-show {
   float: left;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   object-fit: cover;
 }
 
