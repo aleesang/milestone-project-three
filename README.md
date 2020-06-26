@@ -147,7 +147,7 @@ This project has been deployed to Heroku [here](https://milestone-project-three-
 1. First checked configurations in .env and ensured app.config was set correctly.
 2. Logged into Heroku CLI via **$ heroku login**, used **$ heroku git:clone -a milestone-project-three-final** to clone repository, and then used **$ git add .**, **$ git commit -a "log into heroku"**, then pushed commits to heroku via **$ git push heroku master**. 
 - Please note, I did experience errors with the PORT timing out on many deploy attempts, and realised I hadn't connected the PORT into Heroku. 
-4. So in heroku app settings, I went to settings and set the config vars to add DATABASE_URL, IP and PORT.
+3. In heroku app settings, I went to settings and set the config vars to add DATABASE_URL, IP and PORT.
 
 When running the app locally, I used **$ python3 app.py** which opens up app in the development server, and is accessed through [http://127.0.0.1:4444/](http://127.0.0.1:4444/)
 
