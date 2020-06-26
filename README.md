@@ -13,12 +13,8 @@ The website's purpose is to provide a one stop shop for all music lovers who wan
 The target audience for this website are music lovers who want an easy and simple database to discover new music, or share their own recommendations with other music afficianados.
 
 ### User Stories
-1. As a user, I want to discover new songs and artists.
-2. As a user, I want to share my favourite songs and artists with other users by adding my own recommendations.
-3. As a user, I want to find songs in a simple and easy to use database.
-4. As a user, I want the ability to edit my recommendations and remove them whenever I choose to.
 
-Links to more user stories and wireframes can be found [here.](/UX)
+- Please see link here to [User Stories](https://github.com/aleesang/milestone-project-three/blob/master/UX/User%20Stories.pdf) and [Wireframes](/UX).
 
 ## Features
 ### Existing Features
@@ -66,7 +62,7 @@ Users can edit any of the following details of a song already saved in the music
 - Artist Name
 - Spotify URL
 
-#### [Add Song](https://milestone-project-three-final.herokuapp.com/add_song/)
+#### [Add Song](https://milestone-project-three-final.herokuapp.com/add_song)
 Users can add any new song to save to the music library with the following required details:
 - Genre
 - URL of Artist Image
@@ -76,7 +72,9 @@ Users can add any new song to save to the music library with the following requi
 - Spotify URL
 
 ### Features Left to Implement
+If I had a bit more time:
 - Giving users the ability to sort and filter songs on **All Songs Page**
+- Giving users the ability to search for songs
 
 ## Technologies Used
 
