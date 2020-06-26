@@ -168,5 +168,5 @@ This project used some code inspired by the below sources.
 
 ### Acknowledgements
 A big thanks to the following for their support and guidance on this project.
-- **Seun Owonikoko** - Mentor on this project who provided helpful tips, guidance and suggestions for consideration.
+- **Seun Owonikoko** - Mentor on this project who was extremely encouraging, provided many helpful tips, and guidance and suggestions for consideration.
 - **Code Institute** - Re-visited Python modules to help direct me on how to create the functionality of this project.
