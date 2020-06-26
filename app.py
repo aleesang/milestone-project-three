@@ -128,8 +128,9 @@ def edit_song(song_id):
 
 
 # updates song after user saves changes from edit and redirects to "all songs" page
-@app.route('/update_song/<song_id>', methods=['GET', 'POST'])
+@app.route('/update_song/<song_id>', methods=['POST'])
 def update_song(song_id):
+    songid = song_id
     songs = mongo.db.songs
     songs.update( 
     {'_id': ObjectId(song_id)},
@@ -141,7 +142,7 @@ def update_song(song_id):
         'artist_name':request.form.get('artist_name'),
         'song_link':request.form.get('song_link'),
     })
-    return redirect(url_for('show_song'))
+    return redirect(url_for('get_songs'))
 
 
 # removes song after user clicks delete
